@@ -99,57 +99,97 @@
     </style>
 </head>
 <body>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <title>Welcome to Alireza Hashemi Personal Website</title>
+      <!-- Import Lora font from Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <style>
+       /* Header Logo and Title Overrides */
+#logo h1, #logo p {
+  font-family: 'Lora', serif;
+  text-align: right; /* if you prefer right alignment; adjust if needed */
+}
 
+/* Make the name (h1) smaller */
+#logo h1 {
+  font-size: 1.0rem;  /* Decrease the font size for the name */
+}
 
-<html>
-	<head>
-		<title>Welcome to Alireza Hashemi Personal Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+/* Adjust the paragraph so it sits directly under the name */
+#logo p {
+  margin-top: 0.2em;
+  font-size: 0.6rem;
+}
 
-		<!-- Header -->
-			<div id="header">
+/* Make the profile image circular and set a consistent size */
+.image.avatar48 img {
+  width: 70px;             /* Set a fixed width */
+  height: 70px;            /* Set a fixed height */
+  border-radius: 0%;       /* This makes the image circular */
+  object-fit: cover;        /* Ensures the image covers the container without distortion */
+  border: 2px solid #ccc;   /* Optional: add a subtle border for a professional look */
+  box-shadow: 0 2px 4px rgba(224, 4, 4, 0.1); /* Optional: adds a slight shadow */
+}
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/x.jpg" alt="" /></span>
-							<h1 id="title">Alireza Hashemi</h1>
-							<p> AI/ML Engineer</p>
-						</div>
-
-                        <nav id="nav">
-                            <ul>
-                              <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                              <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                              <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio & Cv</span></a></li>
-                              <li><a href="#certificates" id="certificates-link"><span class="icon solid fa-th">Certificates & Courses</span></a></li>
-                              <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-                            </ul>
-                          </nav>
-                          
-                        
-
-
-				</div>
-
-				<div class="bottom">
-
-					<!-- Social Icons -->
-					<ul class="icons">
-						<li><a href="https://github.com/alirzx" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/alireza-hashemi6996" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto:alirahshmi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					
-
-				</div>
-
-			</div>
+      </style>
+   <!DOCTYPE html>
+   <html lang="en">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+       <title>Welcome to Alireza Hashemi Personal Website</title>
+       <!-- Import Lora font from Google Fonts -->
+       <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="assets/css/main.css" />
+       <style>
+         /* Change navigation font to Lora */
+         #nav a {
+           font-family: 'Lora', serif;
+         }
+       </style>
+     </head>
+     <body class="is-preload">
+       <!-- Header -->
+       <div id="header">
+         <div class="top">
+           <!-- Logo -->
+           <div id="logo">
+             <span class="image avatar48">
+               <img src="images/x.jpg" alt="Profile Image" />
+             </span>
+             <h1 id="title">Alireza Hashemi</h1>
+             <p>AI/ML Engineer</p>
+           </div>
+           <nav id="nav">
+             <ul>
+               <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+               <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+               <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio & Cv</span></a></li>
+               <li><a href="#certificates" id="certificates-link"><span class="icon solid fa-th">Certificates & Courses</span></a></li>
+               <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+             </ul>
+           </nav>
+         </div>
+         <div class="bottom">
+           <!-- Social Icons -->
+           <ul class="icons">
+             <li><a href="https://github.com/alirzx" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+             <li><a href="https://www.linkedin.com/in/alireza-hashemi6996" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+             <li><a href="mailto:alirahshmi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+           </ul>
+         </div>
+       </div>
+       <!-- Rest of your page content -->
+     </body>
+   </html>
+   
+  
+  
 
 		<!-- Main -->
 			<div id="main">
@@ -384,20 +424,22 @@
       text-decoration: none;
     }
 
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
-        gap: 20px; /* Gap consistent with Courses */
-      }
-    }
 
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* Always 3 columns even on mobile */
-        gap: 20px; /* Consistent gap on mobile */
-      }
-    }
+    /* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Use 2 columns on tablets */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Use 1 column on mobile for better visibility */
+    gap: 20px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -635,18 +677,25 @@
       border-radius: 5px;
     }
 
-    /* Grid Layout for Courses */
-    #certificates .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+  /* Grid Layout for Courses & Certifications */
+#certificates .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
-    @media (max-width: 1024px) {
-      #certificates .courses-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
+/* Responsive Design for Certificates/Courses Section */
+@media (max-width: 1024px) {
+  #certificates .courses-grid {
+    grid-template-columns: repeat(2, 1fr); /* Use 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #certificates .courses-grid {
+    grid-template-columns: 1fr; /* Use 1 column on mobile */
+  }
+}
 
     /* Column padding */
     #certificates .col {
