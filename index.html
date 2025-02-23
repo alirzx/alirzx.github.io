@@ -43,7 +43,96 @@
   box-shadow: 0 2px 4px rgba(224, 4, 4, 0.1); /* Optional: adds a slight shadow */
 }
 
-      </style>
+ 
+/* Projects Container */
+.projects-container {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-container h2 {
+  font-size: 2.0rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.projects-container p {
+  font-size: 0.8rem;
+  color: #34495e;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;  /* Further reduce gap between items */
+}
+
+.projects-grid .project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(232, 3, 3, 0.1);
+  padding: 10px;  /* Reduced padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  margin: 0;
+}
+
+.projects-grid .project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projects-grid .project img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.projects-grid .project .project-title {
+  font-size: 1.1rem;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 28px;
+  transition: color 0.3s ease-in-out;
+}
+
+.projects-grid .project .project-title:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.projects-grid .project .project-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+</style>
+</head>
+</html>
+
+
    <!DOCTYPE html>
    <html lang="en">
      <head>
@@ -115,7 +204,7 @@
 			<div id="main">
 
 	<!-- Intro -->
-<section id="top" class="one dark cover" style="background-color: #080908; color: rgb(15, 15, 15); padding: 80px 0 50px;">
+<section id="top" class="one dark cover" style="background-color: #080908; color: rgb(15, 15, 15); padding: 0px 0 0px;">
   <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 0 10px;">
       <header>
           <h2 class="alt" style="font-size: 1.7rem; font-family: 'Lora', serif; font-weight: 600; color: #080808; margin-bottom: 10px;">
@@ -138,21 +227,21 @@
 
 <!-- About Me -->
 <section id="about" class="three" style="font-family: 'Lora', serif; line-height: 1.6; padding: 0px 0px;">
-  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 5px 5px;">
+  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0px 0px;">
       <header>
           <h2 style="font-size: 2.2rem; color: #2c3e50; margin-bottom: 1rem;">About Me</h2>
       </header>
                    
-        <p style="font-size: 1.0rem; color: #34495e; margin-bottom: 20px; text-align: justify;">
+        <p style="font-size: 1.0rem; color: #34495e; margin-bottom: 10px; text-align: justify;">
             I am an AI Research Engineer and Machine Learning Specialist with over three years of experience in the field of artificial intelligence, focusing particularly on Machine Learning ,Computer Vision and Medical Imaging. My career has been dedicated to advancing AI technologies, utilizing machine learning and deep learning techniques to tackle complex challenges in both industry and research. Through my expertise in medical imaging, I have worked on cutting-edge projects that leverage AI to enhance diagnostic capabilities and improve healthcare outcomes.
         </p>
 
-        <p style="font-size: 1.0rem; color: #34495e; margin-bottom: 20px; text-align: justify;">
+        <p style="font-size: 1.0rem; color: #34495e; margin-bottom: 10px; text-align: justify;">
             Throughout my professional journey, I have cultivated a robust understanding of advanced AI models and frameworks, specializing in computer vision tasks such as object detection, image segmentation, and visual recognition. My skills extend to deploying and optimizing state-of-the-art solutions using tools like TensorFlow, PyTorch, and OpenCV. I continuously seek opportunities to contribute to innovative projects that push the boundaries of AI and its application in real-world problems. I am passionate about collaborating with experts in the field to deliver impactful, data-driven solutions that improve efficiency and transform industries.
         </p>
 
         <!-- Image with adjusted size and hover effect -->
-        <a href="#" class="image featured" style="width: 40%; margin-bottom: 20px; border-radius: 10px; overflow: hidden; display: block; margin-left: auto; margin-right: auto; transition: transform 0.3s ease;">
+        <a href="#" class="image featured" style="width: 40%; margin-bottom: 50px; border-radius: 10px; overflow: hidden; display: block; margin-left: auto; margin-right: auto; transition: transform 0.3s ease;">
             <img src="images/x.jpg" alt="" style="width: 100%; height: auto; border-radius: 10px;" />
         </a>
 
@@ -169,202 +258,105 @@
         color: #e74c3c;
         text-decoration: underline;
     }
+
+    
 </style>
 
   
-                      
-
-                      
-                      
-
-
-
-
-
-
-
-
-
-				
-
-              <!-- Portfolio -->
-<section id="portfolio" class="two" style="font-family: 'Lora', serif; line-height: 1.4; padding: 0;">
+    <!-- Portfolio Section -->
+<section id="portfolio" class="two" style="font-family: 'Lora', serif; line-height: 1.4; margin: 0; padding: 0;">
   <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0;">
-      <header>
-          <h2 style="font-size: 2rem; color: #2c3e50; margin-bottom: 0.5rem;">Portfolio</h2>
-      </header>
-
-      <p style="font-size: 0.95rem; color: #34495e; margin-bottom: 10px; text-align: justify;">
-          As an AI/ML and Computer Vision Engineer, I have worked on a wide range of projects that demonstrate my expertise in deep learning, computer vision, and time-series analysis. Below are some highlights of my work:
-      </p>
-
-      <p style="font-size: 0.95rem; color: #34495e; margin-bottom: 10px; text-align: justify;">
-          These projects reflect my passion for solving real-world problems using cutting-edge AI and computer vision technologies. Each project showcases my ability to design, implement, and optimize machine learning models for diverse applications.
-      </p>
-
-      <!-- CV download section -->
-      <p style="font-size: 0.95rem; color: #34495e; margin-bottom: 10px; text-align: justify;">
-          For a comprehensive overview of my skills, work experience, and qualifications, please 
-          <a href="images/resume.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">click here</a> to download my CV.
-      </p>
+    <header>
+      <h2 style="font-size: 2.2rem; color: #2c3e50; margin: 0;">Portfolio</h2>
+    </header>
+    <p style="font-size: 1rem; color: #34495e; margin: 0.5rem 0; text-align: justify;">
+      I am an AI/ML and Computer Vision Engineer with a strong background in medical imaging, deep learning, object detection, segmentation, and transfer learning. Over the years, I have developed a diverse range of projects—from advanced medical image classification and segmentation tasks to real-time object detection and forecasting systems—demonstrating my ability to solve complex problems with innovative AI solutions.
+    </p>
+    <p style="font-size: 1rem; color: #34495e; margin: 0.5rem 0; text-align: justify;">
+      In addition to cutting-edge computer vision applications, I have spearheaded several machine learning projects that leverage statistical models and deep neural networks to drive impactful decision-making. My work in these areas underlines my commitment to pushing the boundaries of technology in both industry and academia.
+    </p>
+    <p style="font-size: 1rem; color: #34495e; margin: 0.5rem 0; text-align: justify;">
+      Below is a selection of the key frameworks and tools I frequently work with:
+    </p>
+    <!-- Frameworks List -->
+    <div class="frameworks-column" style="display: flex; flex-direction: column; gap: 10px; padding: 10px 0; text-align: left;">
+      <div style="font-size: 1rem; color: #34495e;">● NumPy / Pandas</div>
+      <div style="font-size: 1rem; color: #34495e;">● Matplotlib / Seaborn</div>
+      <div style="font-size: 1rem; color: #34495e;">● Scikit-Learn</div>
+      <div style="font-size: 1rem; color: #34495e;">● OpenCV</div>
+      <div style="font-size: 1rem; color: #34495e;">● PyTorch / Torchvision</div>
+      <div style="font-size: 1rem; color: #34495e;">● TensorFlow / Keras</div>
+      <div style="font-size: 1rem; color: #34495e;">● Ultralytics YOLO</div>
+      <div style="font-size: 1rem; color: #34495e;">● MLflow</div>
+      <div style="font-size: 1rem; color: #34495e;">● Mediapipe</div>
+      <div style="font-size: 1rem; color: #34495e;">● CVzone</div>
+      <div style="font-size: 1rem; color: #34495e;">● Albumentations</div>
+      <div style="font-size: 1rem; color: #34495e;">● FastAPI</div>
+      <div style="font-size: 1rem; color: #34495e;">● Git / Docker</div>
+    </div>
+    <p style="font-size: 1rem; color: #34495e; margin: 0.5rem 0; text-align: justify;">
+      For a comprehensive overview of my skills, work experience, and project portfolio, please 
+      <a href="images/resume.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">download my CV</a>.
+    </p>
+    <p style="font-size: 1rem; color: #34495e; margin: 0.5rem 0; text-align: justify;">
+      I invite you to explore my professional portfolio and discover how my innovative AI and ML solutions are transforming the landscape of medical imaging and computer vision.
+    </p>
   </div>
 </section>
+            
+            <style>
+              /* Reset margins and paddings */
+              body, h2, p {
+                  margin: 0;
+                  padding: 0;
+              }
+            
+              /* Hover effect for the CV download link */
+              a:hover {
+                  color: #e74c3c;
+                  text-decoration: underline;
+              }
+
+                            
+                /* --- Portfolio Section --- */
+              #portfolio.two {
+                font-family: 'Lora', serif;
+                line-height: 1.4;
+                padding: 0;  /* Remove extra vertical padding */
+              }
+
+              #portfolio.two .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 0;  /* Remove padding to reduce gap */
+              }
+
+              #portfolio.two header h2 {
+                font-size: 2.2rem;
+                color: #2c3e50;
+                margin-bottom: 0rem;
+              }
+
+              #portfolio.two p {
+                font-size: 1rem;
+                color: #34495e;
+                margin-bottom: 0px;
+                text-align: justify;
+              }
 
 
-<style>
-    /* Hover effect for the CV download link */
-    a:hover {
-        color: #e74c3c;
-        text-decoration: underline;
-    }
-</style>
+              /* Reset all margins and paddings to avoid any unwanted space */
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
-  <style>
-   /* Projects Section Container */
-.projects-container {
-  font-family: 'Lora', serif; /* Use Lora font */
-  line-height: 1.6;
-  margin: 10px 0;         /* Reduced vertical margin */
-  padding: 0 10px;        /* Only horizontal padding */
-}
+            </style>
+            
 
-/* Projects Section Heading */
-.projects-container h2 {
-  font-size: 2.0rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;  /* Reduced space below heading */
-}
 
-/* Projects Section Paragraphs (descriptions above the grid) */
-.projects-container p {
-  font-size: 0.8rem;
-  color: #34495e;
-  margin-bottom: 15px;    /* Reduced spacing after paragraph */
-  text-align: justify;
-}
 
-/* Projects Grid (using CSS Grid) */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-  gap: 15px;              /* Reduced gap between projects */
-}
-
-/* Individual Project Cards */
-.projects-grid .project {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(232, 3, 3, 0.1);
-  padding: 15px;          /* Reduced padding inside project cards */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 100%;
-  margin: 0;
-}
-
-.projects-grid .project:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Images within Project Cards */
-.projects-grid .project img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  display: block;
-}
-
-/* Project Titles (Links) */
-/* Merging styles: we use a font size a bit larger than 1em, blue color with underline, and a smooth hover transition */
-.projects-grid .project .project-title {
-  font-size: 1.1rem;
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 8px; /* Reduced space below title */
-  transition: color 0.3s ease-in-out;
-}
-
-.projects-grid .project .project-title:hover {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-/* Project Descriptions */
-.projects-grid .project .project-description {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px; /* Reduced spacing */
-}
-
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  max-height: 80%;
-  object-fit: contain;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
-    gap: 15px;
-  }
-}
-
-  </style>
-</head>
-<body>
-  <!-- Projects section content goes here -->
-</body>
-</html>
 
   <!-- Content here (projects grid) -->
 
@@ -383,8 +375,9 @@
             Multi-Class Classification Using Custom CNN and Pretrained Models
           </a>
           <p class="project-description">
-            Developed and fine-tuned convolutional neural networks (CNNs) for multi-class classification tasks, leveraging both custom architectures and state-of-the-art pretrained models to achieve high accuracy.
+            Developed and fine-tuned convolutional neural networks (CNNs) for multi-class classification of brain tumor images. Leveraged a combination of custom architectures and state-of-the-art pretrained models to achieve an impressive 97% accuracy, demonstrating proficiency in advanced image classification tasks.
           </p>
+          
         </header>
       </div>
 
@@ -429,8 +422,9 @@
             CIFAR-10 Multi-Class Classification Using YOLO and Custom CNN
           </a>
           <p class="project-description">
-            Applied object detection techniques using YOLO and custom CNNs to classify images in the CIFAR-10 dataset, showcasing my ability to adapt models for diverse tasks.
+            Developed a multi-class image classification model for the CIFAR-10 dataset using a combination of YOLO and custom CNN architectures. This project demonstrates my ability to adapt and fine-tune deep learning models for diverse tasks, achieving high performance in image classification.
           </p>
+          
         </header>
       </div>
 
@@ -444,8 +438,9 @@
             Real-Time Instance Segmentation Using YOLOv8
           </a>
           <p class="project-description">
-            Implemented a real-time instance segmentation system using YOLOv8, enabling precise object detection and segmentation in dynamic environments.
+            Implemented a real-time instance segmentation system using YOLOv8, enabling precise object detection and segmentation in dynamic environments through a user-friendly web app built with Streamlit. This solution empowers users to perform accurate, on-the-fly analysis for a wide range of applications.
           </p>
+          
         </header>
       </div>
 
@@ -475,24 +470,26 @@
         Alzheimer's Detection and Multi-Class Classification Using CNN and Pretrained Model
       </a>
       <p class="project-description">
-        Developed a deep learning model to detect and classify Alzheimer's disease stages from medical images, contributing to early diagnosis and healthcare innovation.
-      </p>
+        Developed a deep learning model for early detection and classification of Alzheimer's disease stages using Convolutional Neural Networks (CNNs) and pretrained models. This solution enhances the accuracy of medical diagnoses, facilitating early intervention and improved healthcare outcomes.
+      </p>      
     </header>
   </div>
   
   <!-- Project 8 -->
   <div class="project">
-    <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/virtial mouse.jpg')">
-      <img src="images/virtial mouse.jpg" alt="Virtual Mouse System" />
+    <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/MedMNIST.png')">
+      <img src="images/MedMNIST.png" alt="Virtual Mouse System" />
     </a>
     <header>
-      <a href="https://github.com/alirzx/Virtual-Mouse-with-MediaPipe-Handtracking-Model" target="_blank" class="project-title">
-        Virtual Mouse with MediaPipe Hand Tracking Model
+      <a href="https://github.com/alirzx/Medical-MNIST-Classification-with-100-test-accuracy" target="_blank" class="project-title">
+        Medical MNIST CLassification Resnext50(6Class Dataset)
       </a>
       <p class="project-description">
-        Engineered a virtual mouse system using MediaPipe's hand tracking model, enabling touch-free interaction with computers through hand gestures.
-      </p>
+        Fine-tuned the ResNeXt-50 model to classify medical conditions using the Medical MNIST dataset, achieving 100% accuracy on the test set. By leveraging the power of a pre-trained ResNeXt-50 model, the system was adapted for medical image classification with advanced techniques such as transfer learning, data augmentation, and mixed precision training. The model's performance was further enhanced through optimization of loss functions and evaluation with metrics like classification reports and confusion matrix. This project highlights the effectiveness of deep learning in medical diagnostics, demonstrating how fine-tuning pre-trained models can lead to exceptional results in healthcare applications.
+    </p>
+    
     </header>
+  
   </div>
   
   <!-- Project 9 -->
@@ -505,8 +502,9 @@
         Pneumonia Classification Using Deep CNN
       </a>
       <p class="project-description">
-        Built a deep CNN model to classify pneumonia from chest X-ray images, aiding in the automation of medical diagnostics.
+        Designed and implemented a deep learning-based pneumonia detection system using Convolutional Neural Networks (CNNs) on chest X-ray images. Leveraged transfer learning with pretrained models to enhance classification accuracy, contributing to automated medical diagnostics and early disease detection.
       </p>
+      
     </header>
   </div>
 
@@ -521,8 +519,9 @@
       Skin Cancer Detection Using transfer Learning and Pretrained Models
     </a>
     <p class="project-description">
-      Developed a deep learning model to detect and classify Alzheimer's disease stages from medical images, contributing to early diagnosis and healthcare innovation.
-    </p>
+      Designed and implemented a deep learning-based skin cancer classification system to distinguish between benign and malignant lesions. Leveraged both custom CNN architectures and state-of-the-art pre-trained models, including ResNet, DenseNet, VGG, and Inception v3, to enhance feature extraction and improve classification accuracy. The model was trained using extensive data preprocessing, augmentation techniques, and optimization strategies to achieve high performance. This project showcases the potential of AI in dermatology, aiding in early detection and diagnosis of skin cancer through automated image analysis.
+  </p>
+  
   </header>
 </div>
 
@@ -536,8 +535,9 @@
       Binary Breast Cancer Detection on Mammgoram Images Using Deep Neural Network models
     </a>
     <p class="project-description">
-      Engineered a virtual mouse system using MediaPipe's hand tracking model, enabling touch-free interaction with computers through hand gestures.
-    </p>
+      Developed a deep learning-based system for binary classification of breast cancer using mammogram images, distinguishing between malignant and benign cases. Implemented state-of-the-art models, including YOLO for advanced feature detection and EfficientNet and ResNet18 for robust classification. Leveraged transfer learning and optimized training techniques to enhance accuracy and generalization. This project highlights the application of AI in medical imaging, contributing to early breast cancer detection and improving diagnostic efficiency in healthcare.
+  </p>
+  
   </header>
 </div>
 
@@ -551,8 +551,9 @@
       Covid19 Detection Using Pretrained Models
     </a>
     <p class="project-description">
-      Built a deep CNN model to classify pneumonia from chest X-ray images, aiding in the automation of medical diagnostics.
-    </p>
+      Developed a deep learning model for binary classification of COVID-19 using chest X-ray images, distinguishing between COVID-positive and healthy cases. Utilized pretrained models such as ResNet18, VGG, DenseNet, and EfficientNet alongside a custom CNN to enhance feature extraction and classification accuracy. Applied transfer learning and optimization techniques to improve model generalization. This project demonstrates the role of AI in accelerating COVID-19 detection, aiding in automated diagnostics and medical decision-making.
+  </p>
+  
   </header>
 </div>
 
@@ -566,8 +567,8 @@
       Multi-Class Classification on Sport100 Dataset Using Finetuned Pretrained Models with 97% accuracy
     </a>
     <p class="project-description">
-      Developed a deep learning model to detect and classify Alzheimer's disease stages from medical images, contributing to early diagnosis and healthcare innovation.
-    </p>
+      Designed and implemented a deep learning model for multi-class classification on the Sport100 dataset, accurately distinguishing between 100 different sports categories. Leveraged transfer learning with pretrained models such as ResNet18, ResNet50, and YOLOv8m, achieving over 97% accuracy with YOLO. Employed fine-tuning, data augmentation, and optimization techniques to enhance model performance. This project showcases the power of AI in large-scale image classification tasks, demonstrating the effectiveness of deep learning in recognizing complex visual patterns.
+  </p>  
   </header>
 </div>
 
@@ -581,8 +582,9 @@
       Multi-Class Classification on CIFAR-100 Using Transfer Learning
     </a>
     <p class="project-description">
-      Engineered a virtual mouse system using MediaPipe's hand tracking model, enabling touch-free interaction with computers through hand gestures.
-    </p>
+      Developed a deep learning model for multi-class image classification on the CIFAR-100 dataset, utilizing transfer learning with various pretrained models, including YOLOv8 and other state-of-the-art architectures. Implemented fine-tuning, data augmentation, and optimization strategies to enhance model generalization and accuracy. This project highlights the application of deep learning in complex image recognition tasks, demonstrating the effectiveness of pretrained models in handling diverse object categories.
+  </p>
+  
   </header>
 </div>
 
@@ -596,8 +598,9 @@
       Real-time Object Detection Using YOLOv8 model
     </a>
     <p class="project-description">
-      Built a deep CNN model to classify pneumonia from chest X-ray images, aiding in the automation of medical diagnostics.
+      Developed a real-time object detection system using YOLOv8 models, enabling users to detect objects from images or live webcam feeds. The application was deployed using Streamlit, allowing users to select different YOLO models and save detection results. This project demonstrates the power of deep learning in real-time vision tasks, providing a user-friendly interface for object recognition.
     </p>
+    
   </header>
 </div>
 
@@ -611,17 +614,37 @@
       Real-Time Facemesh Using Mediapipe Model
     </a>
     <p class="project-description">
-      Developed a deep learning model to detect and classify Alzheimer's disease stages from medical images, contributing to early diagnosis and healthcare innovation.
+      Implemented a real-time facial landmark detection system using MediaPipe's Face Mesh solution. This project enables efficient and accurate tracking of facial key points with minimal computational overhead, making it suitable for applications such as augmented reality (AR), virtual avatars, and facial expression analysis.
     </p>
+    
   </header>
 </div>
 
+<!-- Project 17 -->
+<div class="project">
+  <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/virtial mouse.jpg')">
+    <img src="images/virtial mouse.jpg" alt="Virtual Mouse System" />
+  </a>
+  <header>
+    <a href="https://github.com/alirzx/Virtual-Mouse-with-MediaPipe-Handtracking-Model" target="_blank" class="project-title">
+      Virtual Mouse with MediaPipe Hand Tracking Model
+    </a>
+    <p class="project-description">
+      Developed a real-time virtual mouse system using MediaPipe's hand tracking model, enabling touch-free computer interaction through intuitive hand gestures. This system allows users to move the cursor, click, and perform actions using hand movements, demonstrating the potential of AI-powered human-computer interaction.
+    </p>
+
+  </header>
+</div>
   
     </div>
   
 
 </body>
 </html>
+
+
+
+
 
 
 
