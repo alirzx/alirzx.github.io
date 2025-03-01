@@ -1049,7 +1049,21 @@
         transform: translateY(-5px);
         background-color: var(--secondary-color);
       }
+      
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
+    <meta property="og:title" content="Alireza Hashemi | AI/ML Engineer Portfolio">
+    <meta property="og:description" content="Portfolio of Alireza Hashemi, specializing in AI, machine learning and computer vision.">
+    <meta property="og:image" content="https://yoursite.com/images/profile.jpg">
   </head>
   
   <body class="is-preload">
@@ -2300,7 +2314,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // شناسایی دقیق دکمه‌های پروژه
-        var projectButtons = document.querySelectorAll('.project-title, .projects-grid .project a, #portfolio a[href^="#"]');
+        var projectButtons = document.querySelectorAll('.project-title, .projects-grid .project a, #portfolio a[href^="#"], #intro a[href="#portfolio"]');
         
         console.log('==== دیباگ دکمه‌های پروژه ====');
         console.log(`تعداد دکمه‌های پروژه یافت شده: ${projectButtons.length}`);
@@ -2318,5 +2332,30 @@
             console.log('کلیک شد:', this.textContent.trim(), '- هدف:', targetHref);
             
             // فقط برای لینک‌های داخلی با # پردازش کنیم
+            if (targetHref && targetHref.startsWith('#') && targetHref !== '#') {
+              e.preventDefault();
+              
+              var targetElement = document.querySelector(targetHref);
+              
+              if (targetElement) {
+                // محاسبه موقعیت اسکرول
+                var headerOffset = 60;
+                var elementPosition = targetElement.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                // اسکرول به موقعیت
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+                
+                // آپدیت URL
+                history.pushState(null, null, targetHref);
+              }
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
