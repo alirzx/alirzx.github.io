@@ -1680,6 +1680,11 @@
         // Show the modal
         modal.style.display = "block";
         
+        // Add animation class after a short delay
+        setTimeout(() => {
+          modal.classList.add('show');
+        }, 10);
+        
         // Set button visibility based on gallery length
         const prevBtn = document.getElementById("prevImage");
         const nextBtn = document.getElementById("nextImage");
