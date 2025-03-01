@@ -2096,6 +2096,76 @@
           });
         });
       });
+
+      // Make sure all DOM content is loaded before attaching event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // Fix for navigation menu links scrolling
+        const navLinks = document.querySelectorAll('#nav a[href^="#"]');
+        console.log('Navigation links found:', navLinks.length);
+        
+        navLinks.forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Nav link clicked:', this.getAttribute('href'));
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              console.log('Target element found:', targetId);
+              
+              // Get the height of any fixed headers
+              const headerOffset = 60; // Adjust this value based on your header height
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              // Scroll smoothly to the target
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+              
+              // Update URL without jumping
+              history.pushState(null, null, targetId);
+            } else {
+              console.error('Target element not found:', targetId);
+            }
+          });
+        });
+        
+        // Make sure sections have proper scroll-margin-top
+        document.querySelectorAll('section[id]').forEach(section => {
+          section.style.scrollMarginTop = '60px';
+        });
+        
+        // Existing scroll to top button code
+        const scrollButton = document.getElementById('scroll-to-top-btn');
+        
+        if (scrollButton) {
+          window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+              scrollButton.style.opacity = "1";
+              scrollButton.style.visibility = "visible";
+            } else {
+              scrollButton.style.opacity = "0";
+              scrollButton.style.visibility = "hidden";
+            }
+          });
+          
+          scrollButton.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+          
+          if (window.pageYOffset > 300) {
+            scrollButton.style.opacity = "1";
+            scrollButton.style.visibility = "visible";
+          }
+        }
+      });
     </script>
     
     <!-- Scroll to top button -->
@@ -2167,6 +2237,63 @@
           console.error("Scroll to top button element not found");
         }
       })();
+    </script>
+
+    <!-- اضافه کردن این کد درست قبل از تگ پایانی </body> -->
+    <script>
+      // کد بسیار ساده و مستقیم برای اسکرول
+      document.addEventListener('DOMContentLoaded', function() {
+        // تمام لینک‌های منو را پیدا می‌کنیم
+        var navLinks = document.querySelectorAll('#nav a');
+        
+        // برای هر لینک یک event listener اضافه می‌کنیم
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            // آدرس هدف را می‌گیریم
+            var href = this.getAttribute('href');
+            
+            // فقط برای لینک‌های داخلی با # عمل می‌کنیم
+            if (href && href.startsWith('#')) {
+              // از رفتار پیش‌فرض جلوگیری می‌کنیم
+              e.preventDefault();
+              
+              console.log('کلیک روی منو:', href);
+              
+              // عنصر هدف را پیدا می‌کنیم
+              var targetElement = document.querySelector(href);
+              
+              if (targetElement) {
+                console.log('عنصر هدف پیدا شد');
+                
+                // به موقعیت هدف اسکرول می‌کنیم
+                var headerHeight = 60; // ارتفاع هدر ثابت
+                var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                // اسکرول به موقعیت
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+                
+                // URL را بدون پرش به‌روز می‌کنیم
+                history.pushState(null, null, href);
+              } else {
+                console.error('عنصر هدف پیدا نشد:', href);
+              }
+            }
+          });
+        });
+        
+        // لاگ تعداد لینک‌های پیدا شده
+        console.log('تعداد لینک‌های منو پیدا شده:', navLinks.length);
+        
+        // نمایش ID تمام بخش‌های موجود برای دیباگ
+        var sections = document.querySelectorAll('section[id]');
+        console.log('بخش‌های دارای ID:');
+        sections.forEach(function(section) {
+          console.log('- #' + section.id);
+        });
+      });
     </script>
   </body>
 </html>
