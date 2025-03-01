@@ -2295,5 +2295,28 @@
         });
       });
     </script>
+
+    <!-- این کد را درست قبل از تگ پایانی </body> قرار دهید -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // شناسایی دقیق دکمه‌های پروژه
+        var projectButtons = document.querySelectorAll('.project-title, .projects-grid .project a, #portfolio a[href^="#"]');
+        
+        console.log('==== دیباگ دکمه‌های پروژه ====');
+        console.log(`تعداد دکمه‌های پروژه یافت شده: ${projectButtons.length}`);
+        
+        // نمایش تمام دکمه‌های پیدا شده برای دیباگ
+        projectButtons.forEach(function(btn, index) {
+          console.log(`دکمه ${index + 1}:`, btn.textContent.trim(), '- لینک:', btn.getAttribute('href'));
+        });
+        
+        // اضافه کردن event listener به هر دکمه
+        projectButtons.forEach(function(button) {
+          button.addEventListener('click', function(e) {
+            var targetHref = this.getAttribute('href');
+            
+            console.log('کلیک شد:', this.textContent.trim(), '- هدف:', targetHref);
+            
+            // فقط برای لینک‌های داخلی با # پردازش کنیم
   </body>
 </html>
