@@ -33,16 +33,16 @@
       }
       
       [data-theme="dark"] {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-        --heading-color: #000000;
-        --primary-color: #2563eb;
-        --secondary-color: #4f46e5;
-        --accent-color: #3b82f6;
-        --border-color: #e5e7eb;
-        --card-bg: #ffffff;
-        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --heading-color: #ffffff;
+        --primary-color: #3b82f6;
+        --secondary-color: #6366f1;
+        --accent-color: #60a5fa;
+        --border-color: #2d3748;
+        --card-bg: #1e1e1e;
+        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
       }
       
       /* Global Reset */
@@ -58,6 +58,8 @@
         color: #000000;
         background-color: #ffffff;
         transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0;
+        padding: 0;
       }
       
       h1, h2, h3, h4, h5, h6 {
@@ -91,7 +93,7 @@
       section {
         padding: 5rem 0;
         min-height: 100vh;
-        scroll-margin-top: 60px;
+        scroll-margin-top: 70px;
       }
       
       .container {
@@ -238,12 +240,34 @@
         background-color: #ffffff;
       }
       
+      /* Section Headers - Global Style for All Sections */
+      section header h2 {
+        font-size: 2.2rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+        text-align: left;
+      }
+      
+      section header h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      /* Projects Section Header */
       .projects-container h2 {
         font-size: 2.2rem;
         color: #000000;
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 10px;
+        text-align: left;
       }
       
       .projects-container h2:after {
@@ -253,14 +277,15 @@
         left: 0;
         width: 100px;
         height: 3px;
-        background-color: #2563eb;
+        background-color: var(--primary-color);
       }
       
       .projects-container p {
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: #000000;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-align: justify;
+        line-height: 1.8;
       }
       
       /* Projects Grid Layout */
@@ -302,15 +327,15 @@
       
       .projects-grid .project .project-title {
         font-size: 1.2rem;
-        color: #000000;
-        font-weight: bold;
-        margin: 15px 0;
+        color: #2563eb;
+        font-weight: 600;
+        margin: 10px 0;
         transition: color 0.3s ease;
         display: block;
       }
       
       .projects-grid .project .project-title:hover {
-        color: var(--secondary-color);
+        color: #1e40af;
       }
       
       .projects-grid .project .project-description {
@@ -347,10 +372,11 @@
       
       #portfolio.two header h2 {
         font-size: 2.2rem;
-        color: var(--heading-color);
+        color: #000000;
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 10px;
+        text-align: left;
       }
       
       #portfolio.two header h2:after {
@@ -406,12 +432,14 @@
         padding: 0 20px;
       }
       
+      /* Certificates Section Header */
       #certificates h2 {
         font-size: 2.2rem;
         color: #000000;
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 10px;
+        text-align: left;
       }
       
       #certificates h2:after {
@@ -427,8 +455,9 @@
       #certificates p {
         font-size: 1.05rem;
         color: #000000;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-align: justify;
+        line-height: 1.8;
       }
       
       #certificates .project-title {
@@ -495,7 +524,7 @@
         padding: 5rem 0;
         background-color: #ffffff;
         position: relative;
-        scroll-margin-top: 60px;
+        scroll-margin-top: 70px;
       }
       
       #contact .container {
@@ -510,6 +539,7 @@
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 10px;
+        text-align: left;
       }
       
       #contact header h2:after {
@@ -866,8 +896,14 @@
       }
       
       .project-title {
-        color: #000000 !important;
-        font-weight: bold !important;
+        color: #2563eb;
+        font-weight: 600;
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+      
+      .project-title:hover {
+        color: #1e40af;
       }
       
       .project-description {
@@ -937,14 +973,50 @@
           font-size: 16px;
         }
       }
+      
+      /* About Me Section */
+      #about.three {
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+        padding: 5rem 0;
+      }
+      
+      #about.three .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      #about.three header h2 {
+        font-size: 2.2rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+        text-align: left;
+      }
+      
+      #about.three header h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      #about.three p {
+        font-size: 1.05rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        line-height: 1.8;
+      }
     </style>
   </head>
   
   <body class="is-preload">
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
-      <i class="fas fa-moon"></i>
-    </div>
     
     <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scroll-top" title="Scroll to Top">
@@ -967,7 +1039,7 @@
             <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
             <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
             <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio & CV</span></a></li>
-            <li><a href="#Projects" id="Projects-link"><span class="icon solid fa-th">Projects</span></a></li>
+            <li><a href="#projects" id="projects-link"><span class="icon solid fa-th">Projects</span></a></li>
             <li><a href="#honors" id="honors-link"><span class="icon solid fa-award">Honors & Awards</span></a></li>
             <li><a href="#certificates" id="certificates-link"><span class="icon solid fa-th">Certificates & Courses</span></a></li>
             <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
@@ -990,16 +1062,27 @@
       <section id="top" class="one dark cover" style="background-color: #ffffff; color: #000000; padding: 6rem 0;">
         <div class="container">
           <header>
-            <h2 class="alt" style="font-size: 2.5rem; font-family: 'Lora', serif; font-weight: 600; color: #000000; margin-bottom: 1.5rem;">
+            <h2 class="alt" style="font-size: 2.5rem; font-family: 'Lora', serif; font-weight: 600; color: #000000; margin-bottom: 1.5rem; text-align: left; position: relative; padding-bottom: 15px;">
               Hi, I'm <strong style="font-weight: 700; color: var(--primary-color);">Alireza Hashemi</strong>, welcome to my personal website!
             </h2>
-            <p style="font-size: 1.2rem; color: #000000; line-height: 1.8; max-width: 800px; margin: 0 auto 2rem auto;">
+            <style>
+              .alt:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100px;
+                height: 3px;
+                background-color: var(--primary-color);
+              }
+            </style>
+            <p style="font-size: 1.2rem; color: #000000; line-height: 1.8; max-width: 800px; margin: 0 0 2rem 0; text-align: justify;">
               Here, you can learn more about me, explore my academic and professional journey, and dive into the projects I've worked on in the field of Artificial Intelligence, Machine Learning, and Computer Vision.
             </p>
           </header>
 
           <footer>
-            <a href="#Projects" class="button scrolly">
+            <a href="#projects" class="button scrolly">
               My Projects
             </a>
           </footer>
@@ -1014,11 +1097,15 @@
           </header>
           
           <p>
-            I am an AI Research Engineer and Machine Learning Specialist with over three years of experience in the field of artificial intelligence, focusing particularly on Machine Learning, Computer Vision and Medical Imaging. My career has been dedicated to advancing AI technologies, utilizing machine learning and deep learning techniques to tackle complex challenges in both industry and research. Through my expertise in medical imaging, I have worked on cutting-edge projects that leverage AI to enhance diagnostic capabilities and improve healthcare outcomes.
+            As an accomplished AI Research Engineer and Machine Learning Specialist with over three years of specialized experience, I have established myself at the intersection of artificial intelligence, computer vision, and medical imaging. My expertise lies in developing innovative AI solutions that address complex challenges in healthcare diagnostics and medical image analysis. Through rigorous research and practical implementation, I have consistently delivered cutting-edge applications that enhance diagnostic accuracy and improve patient outcomes.
           </p>
 
           <p>
-            Throughout my professional journey, I have cultivated a robust understanding of advanced AI models and frameworks, specializing in computer vision tasks such as object detection, image segmentation, and visual recognition. My skills extend to deploying and optimizing state-of-the-art solutions using tools like TensorFlow, PyTorch, and OpenCV. I continuously seek opportunities to contribute to innovative projects that push the boundaries of AI and its application in real-world problems. I am passionate about collaborating with experts in the field to deliver impactful, data-driven solutions that improve efficiency and transform industries.
+            My technical proficiency spans the complete AI development lifecycle—from data preprocessing and model architecture design to deployment and performance optimization. I have mastered advanced deep learning frameworks including PyTorch and TensorFlow, with particular expertise in implementing state-of-the-art computer vision models such as YOLO, ResNet, and EfficientNet architectures. My work in medical imaging has focused on developing high-precision classification and segmentation models that assist healthcare professionals in early disease detection and treatment planning.
+          </p>
+
+          <p>
+            Beyond technical skills, I bring a collaborative mindset and research-oriented approach to every project. I thrive in multidisciplinary environments where I can translate complex AI concepts into practical solutions that create measurable impact. My commitment to continuous learning keeps me at the forefront of AI advancements, allowing me to implement novel techniques that push the boundaries of what's possible in computer vision and medical image analysis.
           </p>
 
           <!-- Image with adjusted size and hover effect -->
@@ -1035,13 +1122,13 @@
             <h2>Portfolio</h2>
           </header>
           <p>
-            I am an AI/ML and Computer Vision Engineer with a strong background in medical imaging, deep learning, object detection, segmentation, and transfer learning. Over the years, I have developed a diverse range of projects—from advanced medical image classification and segmentation tasks to real-time object detection and forecasting systems—demonstrating my ability to solve complex problems with innovative AI solutions.
+            As a specialized AI/ML Engineer with a focus on computer vision and medical imaging, I have developed a comprehensive portfolio of projects that demonstrate my expertise in creating innovative solutions for complex problems. My work spans multiple domains, with particular emphasis on medical diagnostics, real-time object detection, and advanced classification systems. Each project in my portfolio represents a unique technical challenge that I've addressed through careful research, algorithmic innovation, and rigorous implementation.
           </p>
           <p>
-            In addition to cutting-edge computer vision applications, I have spearheaded several machine learning projects that leverage statistical models and deep neural networks to drive impactful decision-making. My work in these areas underlines my commitment to pushing the boundaries of technology in both industry and academia.
+            My research in medical imaging has produced several breakthrough applications, including high-accuracy classification systems for detecting conditions such as Alzheimer's disease, pneumonia, skin cancer, and diabetic retinopathy. These systems leverage state-of-the-art deep learning architectures and transfer learning techniques to achieve diagnostic accuracy that approaches or exceeds human-level performance. Beyond healthcare, I've developed sophisticated computer vision applications for sports classification, emotion detection, and real-time pose estimation that demonstrate my versatility across different AI domains.
           </p>
           <p>
-            Below is a selection of the key frameworks and tools I frequently work with:
+            My technical expertise is built on a foundation of advanced frameworks and tools that enable me to design, implement, and optimize complex AI systems efficiently:
           </p>
           <!-- Frameworks List -->
           <div class="frameworks-column">
@@ -1060,21 +1147,19 @@
             <div>● Git / Docker</div>
           </div>
           <p>
-            For a comprehensive overview of my skills, work experience, and project portfolio, please 
+            Each project in my portfolio demonstrates not only technical proficiency but also a commitment to solving real-world problems through innovative AI applications. My approach combines theoretical knowledge with practical implementation skills, allowing me to develop solutions that are both technically sophisticated and practically valuable. For a comprehensive overview of my professional experience, technical skills, and academic background, please 
             <a href="images/Alireza Hashemi.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">download my CV</a>.
-          </p>
-          <p>
-            I invite you to explore my professional portfolio and discover how my innovative AI and ML solutions are transforming the landscape of medical imaging and computer vision.
           </p>
         </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="Projects" class="projects-container">
+      <section id="projects" class="projects-container" style="background-color: #ffffff;">
         <div class="container">
           <header>
             <h2>Projects</h2>
           </header>
+          <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000; margin-bottom: 1.5rem;">Here are some of the projects I've worked on in the field of AI and Machine Learning:</p>
 
           <div class="projects-grid">
             <!-- Project 1 -->
@@ -1398,18 +1483,18 @@
           <header>
             <h2>Honors & Awards</h2>
           </header>
-          <p>Recognition for excellence and innovation in the field of Artificial Intelligence and Machine Learning:</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000; margin-bottom: 1.5rem;">Recognition for excellence and innovation in the field of Artificial Intelligence and Machine Learning:</p>
           
           <div class="projects-grid">
             <!-- Award 1 -->
             <div class="project">
               <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/bino402.jpg')">
-                <img src="images/bino402.jpg" alt="Best AI Research Award" />
+                <img src="images/bino402.jpg" alt="BINOCUP 2023 Third Place" />
               </a>
               <header>
-                <h3 class="project-title">Best AI Research Award</h3>
-                <p class="project-description">
-                  Received the Best AI Research Award at the International Conference on Machine Learning Applications 2023 for innovative work on medical image analysis using deep learning techniques. The research demonstrated significant improvements in early disease detection accuracy compared to existing methods.
+                <h3 class="project-title">BINOCUP 2023 Third Place Award</h3>
+                <p class="project-description" style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">
+                  Awarded third place at BINOCUP 2023 at Noshirvani University of Technology for developing an innovative self-coaching system. The solution utilized advanced human pose estimation algorithms to automate workout exercises such as dumbbell curls and squats. Implemented as a fully functional web application, the system provides real-time feedback and form correction, enhancing user workout efficiency and safety without requiring a human personal trainer.
                 </p>
               </header>
             </div>
@@ -1417,12 +1502,12 @@
             <!-- Award 2 -->
             <div class="project">
               <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/photo_5915591541093681521_y.jpg')">
-                <img src="images/photo_5915591541093681521_y.jpg" alt="Innovation Excellence Award" />
+                <img src="images/photo_5915591541093681521_y.jpg" alt="BINOCUP 2024 Second Place" />
               </a>
               <header>
-                <h3 class="project-title">Innovation Excellence Award</h3>
-                <p class="project-description">
-                  Honored with the Innovation Excellence Award at the AI & Healthcare Summit 2022 for developing a novel approach to real-time medical diagnostics using computer vision. The project was recognized for its potential to transform healthcare delivery in resource-limited settings.
+                <h3 class="project-title">BINOCUP 2024 Second Place Award</h3>
+                <p class="project-description" style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">
+                  Secured second place at BINOCUP 2024 for presenting an MVP of a cutting-edge medical assistance software. This AI-powered solution was designed to assist radiologists in detecting and analyzing various medical images including MRIs, X-rays, and other diagnostic scans. The system demonstrated remarkable accuracy in identifying critical conditions such as breast cancer and brain tumors, potentially expediting diagnosis timeframes and improving patient outcomes through early detection of pathological anomalies.
                 </p>
               </header>
             </div>
@@ -1446,7 +1531,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Smartech National AI Bootcamp 2022</h3>
-                  <p>A comprehensive bootcamp on AI fundamentals, where I gained hands-on experience with machine learning algorithms and AI technologies.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">A comprehensive bootcamp on AI fundamentals, where I gained hands-on experience with machine learning algorithms and AI technologies.</p>
                 </header>
               </article>
             </div>
@@ -1458,7 +1543,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Understanding Artificial Intelligence</h3>
-                  <p>This course helped me understand the key concepts of AI, including its applications in various industries and future trends.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">This course helped me understand the key concepts of AI, including its applications in various industries and future trends.</p>
                 </header>
               </article>
             </div>
@@ -1470,7 +1555,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Understanding Data Engineering</h3>
-                  <p>Covered data pipeline construction, data architecture, and tools to manage and manipulate large-scale data efficiently.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Covered data pipeline construction, data architecture, and tools to manage and manipulate large-scale data efficiently.</p>
                 </header>
               </article>
             </div>
@@ -1482,7 +1567,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Understanding Machine Learning</h3>
-                  <p>Focused on the fundamentals of ML algorithms, including supervised and unsupervised learning, and their real-world applications.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Focused on the fundamentals of ML algorithms, including supervised and unsupervised learning, and their real-world applications.</p>
                 </header>
               </article>
             </div>
@@ -1494,7 +1579,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Introduction to SQL</h3>
-                  <p>Learned how to query databases using SQL, an essential skill for handling and extracting insights from large datasets.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Learned how to query databases using SQL, an essential skill for handling and extracting insights from large datasets.</p>
                 </header>
               </article>
             </div>
@@ -1506,7 +1591,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Introduction to Deep Learning with Torch</h3>
-                  <p>Explored deep learning techniques using PyTorch, building and training neural networks for various AI tasks.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Explored deep learning techniques using PyTorch, building and training neural networks for various AI tasks.</p>
                 </header>
               </article>
             </div>
@@ -1518,7 +1603,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Generative AI Concepts</h3>
-                  <p>This course introduced me to the principles of generative models, such as GANs and VAEs, and their applications in creative AI tasks.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">This course introduced me to the principles of generative models, such as GANs and VAEs, and their applications in creative AI tasks.</p>
                 </header>
               </article>
             </div>
@@ -1530,7 +1615,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">AI Ethics</h3>
-                  <p>Focused on the ethical considerations of AI technologies, including bias, privacy, and the societal impact of AI systems.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Focused on the ethical considerations of AI technologies, including bias, privacy, and the societal impact of AI systems.</p>
                 </header>
               </article>
             </div>
@@ -1542,7 +1627,7 @@
                 </a>
                 <header>
                   <h3 class="project-title">Applications of AI in EEG and QEEQ Data Analysis for Better Understanding Brain Function</h3>
-                  <p>Explored the use of AI to analyze EEG and QEEG data, enabling better understanding of brain activity and cognitive states.</p>
+                  <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000;">Explored the use of AI to analyze EEG and QEEG data, enabling better understanding of brain activity and cognitive states.</p>
                 </header>
               </article>
             </div>
@@ -1557,7 +1642,7 @@
             <h2>Contact</h2>
           </header>
 
-          <p>If you'd like to get in touch, discuss collaboration opportunities, or just say hello, feel free to reach out! I'm always open to new ideas and conversations. You can contact me via email or connect with me on social media.</p>
+          <p style="font-size: 1.05rem; line-height: 1.8; text-align: justify; color: #000000; margin-bottom: 1.5rem;">If you'd like to get in touch, discuss collaboration opportunities, or just say hello, feel free to reach out! I'm always open to new ideas and conversations. You can contact me via email or connect with me on social media.</p>
 
           <!-- Contact Form -->
           <form id="contactForm" method="POST" action="https://formspree.io/f/mjkgrpkj">
@@ -1858,12 +1943,42 @@
       });
       window.addEventListener('scroll', animateOnScroll);
 
-      // Add smooth scrolling to all links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({  
-            behavior: 'smooth'
+      // Improved smooth scrolling function
+      function smoothScrollTo(targetElement) {
+        if (!targetElement) return;
+        
+        // Get the height of any fixed header
+        const headerOffset = 70;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        // Smooth scroll to the target
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      // Add smooth scrolling to all navigation links
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            
+            // Check if the targetId is valid
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              // Smooth scroll to target
+              smoothScrollTo(targetElement);
+              
+              // Update URL without jumping
+              history.pushState(null, null, targetId);
+            }
           });
         });
       });
