@@ -1013,6 +1013,42 @@
         text-align: justify;
         line-height: 1.8;
       }
+      
+      /* Add scroll-margin-top to all sections for proper scrolling with fixed header */
+      section {
+        scroll-margin-top: 70px;
+      }
+      
+      /* Scroll to Top Button */
+      .scroll-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+      
+      .scroll-top-btn.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .scroll-top-btn:hover {
+        transform: translateY(-5px);
+        background-color: var(--secondary-color);
+      }
     </style>
   </head>
   
@@ -1939,6 +1975,25 @@
           project.style.transform = "translateY(0)";
         });
         
+        // Initialize scroll-to-top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        if (scrollTopBtn) {
+          window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+              scrollTopBtn.classList.add('show');
+            } else {
+              scrollTopBtn.classList.remove('show');
+            }
+          });
+          
+          scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+        
         animateOnScroll();
       });
       window.addEventListener('scroll', animateOnScroll);
@@ -2019,6 +2074,99 @@
         
         observer.observe(modal, { attributes: true });
       });
+      
+      // Add this JavaScript for scroll-to-top functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('show');
+          } else {
+            scrollTopBtn.classList.remove('show');
+          }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+    
+    <!-- Scroll to top button -->
+    <div id="scroll-top" class="scroll-top-btn">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+    
+    <!-- Right before the closing </body> tag -->
+    <!-- Scroll to top button -->
+    <div id="scroll-to-top-btn" style="
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      font-size: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    ">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+
+    <script>
+      // Add this just before the closing </body> tag
+      // Scroll to top button functionality
+      (function() {
+        // Get the button
+        const scrollButton = document.getElementById('scroll-to-top-btn');
+        
+        // Make sure the button exists
+        if (scrollButton) {
+          // Show button when page is scrolled down
+          window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+              scrollButton.style.opacity = "1";
+              scrollButton.style.visibility = "visible";
+            } else {
+              scrollButton.style.opacity = "0";
+              scrollButton.style.visibility = "hidden";
+            }
+          });
+          
+          // Scroll to top when button clicked
+          scrollButton.addEventListener('click', function() {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+          
+          // Initial check
+          if (window.pageYOffset > 300) {
+            scrollButton.style.opacity = "1";
+            scrollButton.style.visibility = "visible";
+          }
+          
+          console.log("Scroll to top button initialized");
+        } else {
+          console.error("Scroll to top button element not found");
+        }
+      })();
     </script>
   </body>
 </html>
