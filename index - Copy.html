@@ -1,0 +1,1904 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Alireza Hashemi | AI/ML Engineer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Alireza Hashemi - AI/ML Engineer specializing in computer vision and medical imaging with extensive experience in deep learning projects.">
+    <meta name="keywords" content="AI, Machine Learning, Deep Learning, Computer Vision, Medical Imaging, Neural Networks, YOLOv8, PyTorch, TensorFlow">
+    <meta name="author" content="Alireza Hashemi">
+    
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <!-- Custom Styles -->
+    <style>
+      /* CSS Variables for theme switching */
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --heading-color: #000000;
+        --primary-color: #2563eb;
+        --secondary-color: #4f46e5;
+        --accent-color: #3b82f6;
+        --border-color: #e5e7eb;
+        --card-bg: #ffffff;
+        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      [data-theme="dark"] {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --heading-color: #000000;
+        --primary-color: #2563eb;
+        --secondary-color: #4f46e5;
+        --accent-color: #3b82f6;
+        --border-color: #e5e7eb;
+        --card-bg: #ffffff;
+        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Global Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+        color: #000000;
+        background-color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lora', serif;
+        color: #000000;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2.2rem; }
+      h3 { font-size: 1.8rem; }
+      
+      p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+      
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      a:hover {
+        color: var(--secondary-color);
+      }
+      
+      /* Sections */
+      section {
+        padding: 5rem 0;
+        min-height: 100vh;
+        scroll-margin-top: 60px;
+      }
+      
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      /* Header & Navigation */
+      #header {
+        background-color: #222222;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      #logo h1, #logo p {
+        font-family: 'Lora', serif;
+        text-align: right;
+        transition: color 0.3s ease;
+      }
+      
+      #logo h1 {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #ffffff;
+      }
+      
+      #logo p {
+        font-family: 'Lora', serif;
+        font-size: 0.8rem;
+        margin: 0.2em 0 0 0;
+        color: #e0e0e0;
+      }
+      
+      #nav a {
+        font-family: 'Lora', serif;
+        font-size: 0.9rem;
+        color: #ffffff;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: block;
+        padding: 10px;
+      }
+      
+      #nav a:hover {
+        color: #3b82f6;
+        transform: translateX(5px);
+      }
+      
+      #nav li {
+        margin-bottom: 5px;
+      }
+      
+      .image.avatar48 img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #3b82f6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .image.avatar48 img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+        border-color: #60a5fa;
+      }
+      
+      /* Social icons in the sidebar */
+      #header .icons a {
+        color: #ffffff;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      
+      #header .icons a:hover {
+        color: #3b82f6;
+        transform: scale(1.2);
+      }
+      
+      /* Theme toggle */
+      .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      
+      .theme-toggle:hover {
+        transform: scale(1.1);
+      }
+      
+      /* General Styles */
+      .image {
+        transition: transform 0.4s ease;
+        overflow: hidden;
+        display: block;
+      }
+      
+      .image:hover {
+        transform: scale(1.03);
+      }
+      
+      .image img {
+        transition: transform 0.4s ease;
+      }
+      
+      .button {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 30px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
+      .button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      }
+      
+      /* Projects Section Styles */
+      .projects-container {
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+        padding: 5rem 0;
+        background-color: #ffffff;
+      }
+      
+      .projects-container h2 {
+        font-size: 2.2rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      
+      .projects-container h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: #2563eb;
+      }
+      
+      .projects-container p {
+        font-size: 1rem;
+        color: #000000;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      
+      /* Projects Grid Layout */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 2rem;
+      }
+      
+      .projects-grid .project {
+        background-color: #ffffff;
+        border: 2px solid #e5e7eb;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .projects-grid .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        border-color: #3b82f6;
+      }
+      
+      .projects-grid .project img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        transition: transform 0.5s ease;
+        border: 1px solid #e5e7eb;
+      }
+      
+      .projects-grid .project .project-title {
+        font-size: 1.2rem;
+        color: #000000;
+        font-weight: bold;
+        margin: 15px 0;
+        transition: color 0.3s ease;
+        display: block;
+      }
+      
+      .projects-grid .project .project-title:hover {
+        color: var(--secondary-color);
+      }
+      
+      .projects-grid .project .project-description {
+        font-size: 0.95rem;
+        color: #000000;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+      
+      /* Animation for project appearance */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Portfolio Section */
+      #portfolio.two {
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+        padding: 5rem 0;
+      }
+      
+      #portfolio.two .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      #portfolio.two header h2 {
+        font-size: 2.2rem;
+        color: var(--heading-color);
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      
+      #portfolio.two header h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      #portfolio.two p {
+        font-size: 1.05rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        line-height: 1.8;
+      }
+      
+      /* Frameworks list styling */
+      .frameworks-column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 2rem 0;
+      }
+      
+      .frameworks-column div {
+        font-size: 1rem;
+        color: #000000;
+        padding: 8px 12px;
+        background-color: var(--card-bg);
+        border-radius: 6px;
+        border-left: 3px solid var(--primary-color);
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .frameworks-column div:hover {
+        transform: translateX(5px);
+        box-shadow: var(--hover-shadow);
+      }
+      
+      /* Certificates Section */
+      #certificates {
+        background-color: #ffffff;
+      }
+      
+      #certificates .container {
+        font-family: 'Lora', serif;
+        line-height: 1.6;
+        padding: 0 20px;
+      }
+      
+      #certificates h2 {
+        font-size: 2.2rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      
+      #certificates h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      #certificates p {
+        font-size: 1.05rem;
+        color: #000000;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      
+      #certificates .project-title {
+        font-size: 1.2rem;
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+      }
+      
+      #certificates .project-title:hover {
+        color: var(--primary-color);
+      }
+      
+      #certificates .item p {
+        font-size: 0.95rem;
+        color: #000000;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      
+      #certificates .item {
+        background-color: #ffffff;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        box-shadow: var(--card-shadow);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #certificates .item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--hover-shadow);
+      }
+      
+      #certificates .image.fit img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+      }
+      
+      #certificates .image.fit img:hover {
+        transform: scale(1.03);
+      }
+      
+      #certificates .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+      
+      #certificates .col {
+        display: flex;
+      }
+      
+      /* Contact Section */
+      #contact {
+        font-family: 'Lora', serif; 
+        line-height: 1.6;
+        padding: 5rem 0;
+        background-color: #ffffff;
+        position: relative;
+        scroll-margin-top: 60px;
+      }
+      
+      #contact .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      #contact header h2 {
+        font-size: 2.2rem;
+        color: #000000;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+      
+      #contact header h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+      }
+      
+      #contact p {
+        font-size: 1.05rem;
+        color: #000000;
+        margin-bottom: 2rem;
+        text-align: justify;
+      }
+      
+      #contact .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 2rem;
+      }
+      
+      #contact .col-6 {
+        flex: 1 1 calc(50% - 15px);
+      }
+      
+      #contact .col-12 {
+        width: 100%;
+      }
+      
+      #contact label {
+        display: block;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
+        color: #000000;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      
+      #contact input[type="text"], 
+      #contact input[type="email"], 
+      #contact textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        width: 100%;
+        background-color: #ffffff;
+        color: #000000;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      #contact textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+      
+      #contact input[type="text"]:focus, 
+      #contact input[type="email"]:focus, 
+      #contact textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+      }
+      
+      #contact input[type="submit"] {
+        font-size: 1.1rem;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
+      #contact input[type="submit"]:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      }
+      
+      #contact .success-message {
+        display: none;
+        padding: 20px;
+        background: #d1fae5;
+        color: #065f46;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: var(--card-shadow);
+        transition: background-color 0.3s ease;
+      }
+      
+      [data-theme="dark"] #contact .success-message {
+        background: #d1fae5;
+        color: #065f46;
+      }
+      
+      #contact .visible {
+        display: block !important;
+        animation: fadeIn 0.5s ease;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding-top: 50px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .modal.show {
+        opacity: 1;
+      }
+      
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 800px;
+        max-height: 80vh;
+        object-fit: contain;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      
+      .modal.show .modal-content {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        cursor: pointer;
+        z-index: 1001;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 1200px) {
+        .container {
+          max-width: 900px;
+        }
+        
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 25px;
+        }
+        
+        #certificates .courses-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 25px;
+        }
+        
+        .frameworks-column {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (max-width: 900px) {
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.6rem; }
+        
+        section {
+          padding: 4rem 0;
+        }
+        
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        
+        #certificates .courses-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        
+        #contact .col-6 {
+          flex: 1 1 100%;
+        }
+        
+        #contact header h2 {
+          font-size: 2rem;
+        }
+        
+        .frameworks-column {
+          grid-template-columns: 1fr;
+        }
+        
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.8rem; }
+        h3 { font-size: 1.5rem; }
+        
+        section {
+          padding: 3rem 0;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 15px;
+        }
+        
+        h1 { font-size: 1.8rem; }
+        h2 { font-size: 1.6rem; }
+        h3 { font-size: 1.4rem; }
+        
+        #logo h1 {
+          font-size: 1rem;
+        }
+        
+        #logo p {
+          font-size: 0.7rem;
+        }
+        
+        .button {
+          padding: 10px 20px;
+          font-size: 0.85rem;
+        }
+        
+        .modal-content {
+          width: 95%;
+        }
+        
+        .close {
+          top: 10px;
+          right: 20px;
+          font-size: 30px;
+        }
+      }
+      
+      /* Scroll to top button */
+      .scroll-top {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        color: white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      
+      .scroll-top:hover {
+        transform: scale(1.1);
+        background-color: var(--secondary-color);
+      }
+      
+      .scroll-top.show {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+      
+      /* Sticky Nav for mobile */
+      @media (max-width: 736px) {
+        #header nav {
+          position: sticky;
+          top: 0;
+          background-color: var(--card-bg);
+          z-index: 100;
+          padding: 10px 0;
+          box-shadow: var(--card-shadow);
+        }
+      }
+      
+      /* Honors & Awards Section */
+      #honors.projects-container {
+        background-color: #ffffff;
+      }
+      
+      #honors .project {
+        background-color: #ffffff;
+        border: 2px solid #e5e7eb;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      #honors .project h3.project-title {
+        color: #000000;
+        font-size: 1.4rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      
+      #honors .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+        border-color: #3b82f6;
+      }
+      
+      /* Ensure all project cards have consistent styling */
+      .project {
+        background-color: #ffffff !important;
+        border: 2px solid #e5e7eb !important;
+        border-radius: 10px !important;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      }
+      
+      .project:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2) !important;
+        border-color: #3b82f6 !important;
+      }
+      
+      .project-title {
+        color: #000000 !important;
+        font-weight: bold !important;
+      }
+      
+      .project-description {
+        color: #000000 !important;
+      }
+      
+      /* Modal Navigation Styles */
+      .modal-navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .nav-btn {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        z-index: 1002;
+      }
+      
+      .nav-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: translateY(-50%) scale(1.1);
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+      
+      .image-counter {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  
+  <body class="is-preload">
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
+      <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scroll-top" title="Scroll to Top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Header -->
+    <div id="header">
+      <div class="top">
+        <!-- Logo -->
+        <div id="logo">
+          <span class="image avatar48">
+            <img src="images/x.jpg" alt="Alireza Hashemi" />
+          </span>
+          <h1 id="title">Alireza Hashemi</h1>
+          <p>AI/ML Engineer</p>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+            <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+            <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio & CV</span></a></li>
+            <li><a href="#Projects" id="Projects-link"><span class="icon solid fa-th">Projects</span></a></li>
+            <li><a href="#honors" id="honors-link"><span class="icon solid fa-award">Honors & Awards</span></a></li>
+            <li><a href="#certificates" id="certificates-link"><span class="icon solid fa-th">Certificates & Courses</span></a></li>
+            <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottom">
+        <!-- Social Icons -->
+        <ul class="icons">
+          <li><a href="https://github.com/alirzx" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/alireza-hashemi6996" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:alirahshmi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Intro -->
+      <section id="top" class="one dark cover" style="background-color: #ffffff; color: #000000; padding: 6rem 0;">
+        <div class="container">
+          <header>
+            <h2 class="alt" style="font-size: 2.5rem; font-family: 'Lora', serif; font-weight: 600; color: #000000; margin-bottom: 1.5rem;">
+              Hi, I'm <strong style="font-weight: 700; color: var(--primary-color);">Alireza Hashemi</strong>, welcome to my personal website!
+            </h2>
+            <p style="font-size: 1.2rem; color: #000000; line-height: 1.8; max-width: 800px; margin: 0 auto 2rem auto;">
+              Here, you can learn more about me, explore my academic and professional journey, and dive into the projects I've worked on in the field of Artificial Intelligence, Machine Learning, and Computer Vision.
+            </p>
+          </header>
+
+          <footer>
+            <a href="#Projects" class="button scrolly">
+              My Projects
+            </a>
+          </footer>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section id="about" class="three" style="background-color: #ffffff;">
+        <div class="container">
+          <header>
+            <h2>About Me</h2>
+          </header>
+          
+          <p>
+            I am an AI Research Engineer and Machine Learning Specialist with over three years of experience in the field of artificial intelligence, focusing particularly on Machine Learning, Computer Vision and Medical Imaging. My career has been dedicated to advancing AI technologies, utilizing machine learning and deep learning techniques to tackle complex challenges in both industry and research. Through my expertise in medical imaging, I have worked on cutting-edge projects that leverage AI to enhance diagnostic capabilities and improve healthcare outcomes.
+          </p>
+
+          <p>
+            Throughout my professional journey, I have cultivated a robust understanding of advanced AI models and frameworks, specializing in computer vision tasks such as object detection, image segmentation, and visual recognition. My skills extend to deploying and optimizing state-of-the-art solutions using tools like TensorFlow, PyTorch, and OpenCV. I continuously seek opportunities to contribute to innovative projects that push the boundaries of AI and its application in real-world problems. I am passionate about collaborating with experts in the field to deliver impactful, data-driven solutions that improve efficiency and transform industries.
+          </p>
+
+          <!-- Image with adjusted size and hover effect -->
+          <a href="#" class="image featured" style="width: 40%; margin: 2rem auto; border-radius: 10px; overflow: hidden; display: block;">
+            <img src="images/x.jpg" alt="Alireza Hashemi" style="width: 100%; height: auto; border-radius: 10px;" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="two" style="background-color: #ffffff;">
+        <div class="container">
+          <header>
+            <h2>Portfolio</h2>
+          </header>
+          <p>
+            I am an AI/ML and Computer Vision Engineer with a strong background in medical imaging, deep learning, object detection, segmentation, and transfer learning. Over the years, I have developed a diverse range of projects—from advanced medical image classification and segmentation tasks to real-time object detection and forecasting systems—demonstrating my ability to solve complex problems with innovative AI solutions.
+          </p>
+          <p>
+            In addition to cutting-edge computer vision applications, I have spearheaded several machine learning projects that leverage statistical models and deep neural networks to drive impactful decision-making. My work in these areas underlines my commitment to pushing the boundaries of technology in both industry and academia.
+          </p>
+          <p>
+            Below is a selection of the key frameworks and tools I frequently work with:
+          </p>
+          <!-- Frameworks List -->
+          <div class="frameworks-column">
+            <div>● NumPy / Pandas</div>
+            <div>● Matplotlib / Seaborn</div>
+            <div>● Scikit-Learn</div>
+            <div>● OpenCV</div>
+            <div>● PyTorch / Torchvision</div>
+            <div>● TensorFlow / Keras</div>
+            <div>● Ultralytics YOLO</div>
+            <div>● MLflow</div>
+            <div>● Mediapipe</div>
+            <div>● CVzone</div>
+            <div>● Albumentations</div>
+            <div>● FastAPI</div>
+            <div>● Git / Docker</div>
+          </div>
+          <p>
+            For a comprehensive overview of my skills, work experience, and project portfolio, please 
+            <a href="images/Alireza Hashemi.pdf" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">download my CV</a>.
+          </p>
+          <p>
+            I invite you to explore my professional portfolio and discover how my innovative AI and ML solutions are transforming the landscape of medical imaging and computer vision.
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="Projects" class="projects-container">
+        <div class="container">
+          <header>
+            <h2>Projects</h2>
+          </header>
+
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/sport.png')">
+                <img src="images/sport.png" alt="Sport Classification" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/Sport-Genre-100-Class-Classification" target="_blank">
+                    Multi-Class Classification on Sport100 Dataset Using Finetuned Pretrained Models with 97% accuracy
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Designed and implemented a deep learning model for multi-class classification on the Sport100 dataset, accurately distinguishing between 100 different sports categories. Leveraged transfer learning with pretrained models such as ResNet18, ResNet50, and YOLOv8m, achieving over 97% accuracy with YOLO. Employed fine-tuning, data augmentation, and optimization techniques to enhance model performance. This project showcases the power of AI in large-scale image classification tasks, demonstrating the effectiveness of deep learning in recognizing complex visual patterns.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/mediapose.png')">
+                <img src="images/mediapose.png" alt="Self-Coaching" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/Selfcotching_project" target="_blank">
+                    Real-Time AI Self-Coaching System
+                  </a>
+                </h3>
+                <p class="project-description">
+                  An advanced AI-powered fitness assistant that utilizes MediaPipe and YOLO-based pose estimation to analyze body movements in real time. The system detects and evaluates Squats and Lateral Double Raises, providing instant feedback on posture correctness while counting both correct and incorrect repetitions. By leveraging computer vision and deep learning, this self-coaching solution enhances workout efficiency, ensuring users maintain proper form without needing a personal trainer. 🚀💪
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/stress.png')">
+                <img src="images/stress.png" alt="Stress and Non Stress Classification" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/Emotion-Detection-using-YOLO-Large-Scale-Dataset-with-98-accuracy-" target="_blank">
+                    Virtual Emotion Detection Using YOLO
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Developed a high-accuracy emotion classification model to distinguish between stress and non-stress states using large-scale, high-quality data. Leveraged ResNet-18, ResNet-50, and YOLO for feature extraction and classification, achieving over 98% accuracy with YOLO. This project demonstrates the effectiveness of deep learning in mental health analysis, providing a robust solution for real-time emotion detection.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/cifar100.png')">
+                <img src="images/cifar100.png" alt="CIFAR-100 Classification" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/Cifar100-Multi-Class-Classification-Using-Pretrained-Models" target="_blank">
+                    Multi-Class Classification on CIFAR-100 Using Transfer Learning
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Developed a deep learning model for multi-class image classification on the CIFAR-100 dataset, utilizing transfer learning with various pretrained models, including YOLOv8 and other state-of-the-art architectures. Implemented fine-tuning, data augmentation, and optimization strategies to enhance model generalization and accuracy. This project highlights the application of deep learning in complex image recognition tasks, demonstrating the effectiveness of pretrained models in handling diverse object categories.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/instance segmentation.png')">
+                <img src="images/instance segmentation.png" alt="Instance Segmentation" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/Real-time-Instance-Segmentation-Using-YOLOv8" target="_blank">
+                    Real-Time Instance Segmentation Using YOLOv8
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Implemented a real-time instance segmentation system using YOLOv8, enabling precise object detection and segmentation in dynamic environments through a user-friendly web app built with Streamlit. This solution empowers users to perform accurate, on-the-fly analysis for a wide range of applications.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/mnist.png')">
+                <img src="images/mnist.png" alt="MNist Image Generation" />
+              </a>
+              <header>
+                <h3 class="project-title">
+                  <a href="https://github.com/alirzx/MNIST-Generation-Using-GAN" target="_blank">
+                    MNIST Image Generation Using GAN Model
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Developed a Generative Adversarial Network (GAN) to generate high-quality, synthetic images from the MNIST dataset. This project showcases my expertise in generative AI, leveraging advanced machine learning techniques to create realistic handwritten digit images. The model demonstrates the power of GANs in learning complex data distributions and generating new samples that closely resemble real-world data.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/alzheimer.png')">
+                <img src="images/alzheimer.png" alt="Alzheimer Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Alzheimer-s-Detection-and-Multi-Class-Classification-using-Cnn-and-pretrained-model" target="_blank" class="project-title">
+                  Alzheimer's Detection and Multi-Class Classification Using CNN and Pretrained Model
+                </a>
+                <p class="project-description">
+                  Developed a deep learning model for early detection and classification of Alzheimer's disease stages using Convolutional Neural Networks (CNNs) and pretrained models. This solution enhances the accuracy of medical diagnoses, facilitating early intervention and improved healthcare outcomes.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/MedMNIST.png')">
+                <img src="images/MedMNIST.png" alt="Medical MNIST Classification" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Medical-MNIST-Classification-with-100-test-accuracy" target="_blank" class="project-title">
+                  Medical MNIST Classification Resnext50(6Class Dataset)
+                </a>
+                <p class="project-description">
+                  Fine-tuned the ResNeXt-50 model to classify medical conditions using the Medical MNIST dataset, achieving 100% accuracy on the test set. By leveraging the power of a pre-trained ResNeXt-50 model, the system was adapted for medical image classification with advanced techniques such as transfer learning, data augmentation, and mixed precision training. The model's performance was further enhanced through optimization of loss functions and evaluation with metrics like classification reports and confusion matrix. This project highlights the effectiveness of deep learning in medical diagnostics, demonstrating how fine-tuning pre-trained models can lead to exceptional results in healthcare applications.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/pnumonia.jpg')">
+                <img src="images/pnumonia.jpg" alt="Pneumonia Classification" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Pneumonia-Classification-Using-Deep-CNN" target="_blank" class="project-title">
+                  Pneumonia Classification Using Deep CNN
+                </a>
+                <p class="project-description">
+                  Designed and implemented a deep learning-based pneumonia detection system using Convolutional Neural Networks (CNNs) on chest X-ray images. Leveraged transfer learning with pretrained models to enhance classification accuracy, contributing to automated medical diagnostics and early disease detection.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/skin.png')">
+                <img src="images/skin.png" alt="Skin Cancer Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Skin-Cancer-Classification" target="_blank" class="project-title">
+                  Skin Cancer Detection Using Transfer Learning and Pretrained Models
+                </a>
+                <p class="project-description">
+                  Designed and implemented a deep learning-based skin cancer classification system to distinguish between benign and malignant lesions. Leveraged both custom CNN architectures and state-of-the-art pre-trained models, including ResNet, DenseNet, VGG, and Inception v3, to enhance feature extraction and improve classification accuracy. The model was trained using extensive data preprocessing, augmentation techniques, and optimization strategies to achieve high performance. This project showcases the potential of AI in dermatology, aiding in early detection and diagnosis of skin cancer through automated image analysis.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 11 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/breast_mammogram.png')">
+                <img src="images/breast_mammogram.png" alt="Breast Cancer Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Breast-Cancer-Binary-Mamogram-Image-Classification-Using-Custom-CNN-and-Pretrained-Models" target="_blank" class="project-title">
+                  Binary Breast Cancer Detection on Mammogram Images Using Deep Neural Network Models
+                </a>
+                <p class="project-description">
+                  Developed a deep learning-based system for binary classification of breast cancer using mammogram images, distinguishing between malignant and benign cases. Implemented state-of-the-art models, including YOLO for advanced feature detection and EfficientNet and ResNet18 for robust classification. Leveraged transfer learning and optimized training techniques to enhance accuracy and generalization. This project highlights the application of AI in medical imaging, contributing to early breast cancer detection and improving diagnostic efficiency in healthcare.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 12 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/covid.png')">
+                <img src="images/covid.png" alt="COVID-19 Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Covid-19-Binary-Classification" target="_blank" class="project-title">
+                  Covid19 Detection Using Pretrained Models
+                </a>
+                <p class="project-description">
+                  Developed a deep learning model for binary classification of COVID-19 using chest X-ray images, distinguishing between COVID-positive and healthy cases. Utilized pretrained models such as ResNet18, VGG, DenseNet, and EfficientNet alongside a custom CNN to enhance feature extraction and classification accuracy. Applied transfer learning and optimization techniques to improve model generalization. This project demonstrates the role of AI in accelerating COVID-19 detection, aiding in automated diagnostics and medical decision-making.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 13 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/brain tumor.png')">
+                <img src="images/brain tumor.png" alt="Brain Tumor Classification" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Brain-Tumor-Multi-Class-Classification" target="_blank" class="project-title">
+                  Multi-Class Classification Using Custom CNN and Pretrained Models
+                </a>
+                <p class="project-description">
+                  Developed and fine-tuned convolutional neural networks (CNNs) for multi-class classification of brain tumor images. Leveraged a combination of custom architectures and state-of-the-art pretrained models to achieve an impressive 97% accuracy, demonstrating proficiency in advanced image classification tasks.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 14 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/aptos.png')">
+                <img src="images/aptos.png" alt="Diabetic Retinopathy Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/diabetic-retinopathy-Classification" target="_blank" class="project-title">
+                  Diabetic Retinopathy Detection
+                </a>
+                <p class="project-description">
+                  Developed a deep learning model for multi-class image classification on the APTOS 2019 (JPG) dataset, utilizing transfer learning with various pretrained models, including ResNeXt-50 and other state-of-the-art architectures like Xception model. Implemented fine-tuning, data augmentation, and optimization strategies to enhance model generalization and accuracy. This project highlights the application of deep learning in complex image recognition tasks, demonstrating the effectiveness of pretrained models in handling diverse object categories.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 15 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/KNEE.jpg')">
+                <img src="images/KNEE.jpg" alt="Knee Osteoarthritis Classification" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Knee-Osteoarthritis-Detection-Using-YOLO" target="_blank" class="project-title">
+                  Knee Osteoarthritis Classification
+                </a>
+                <p class="project-description">
+                  This project focuses on classifying knee osteoarthritis severity using medical images. The dataset includes labeled classes such as "Normal," "Osteopenia," and "Osteoporosis." I implemented ResNeXt50, a powerful convolutional neural network, to accurately classify the images into their respective categories.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 16 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/cifar10.png')">
+                <img src="images/cifar10.png" alt="CIFAR-10 Classification" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Cifar10-Classification-using-Custom-CNN-and-pretrained-Models" target="_blank" class="project-title">
+                  CIFAR-10 Multi-Class Classification Using YOLO and Custom CNN
+                </a>
+                <p class="project-description">
+                  Developed a multi-class image classification model for the CIFAR-10 dataset using a combination of YOLO and custom CNN architectures. This project demonstrates my ability to adapt and fine-tune deep learning models for diverse tasks, achieving high performance in image classification.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 17 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/object.jpg')">
+                <img src="images/object.jpg" alt="Object Detection" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Real-Time-Object-Detection-Using-Pretrained-Yolov8-Model-On-Webcam" target="_blank" class="project-title">
+                  Real-time Object Detection Using YOLOv8 model
+                </a>
+                <p class="project-description">
+                  Developed a real-time object detection system using YOLOv8 models, enabling users to detect objects from images or live webcam feeds. The application was deployed using Streamlit, allowing users to select different YOLO models and save detection results. This project demonstrates the power of deep learning in real-time vision tasks, providing a user-friendly interface for object recognition.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 18 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/facemesh.jpg')">
+                <img src="images/facemesh.jpg" alt="Facemesh" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Realtime-Facemesh-Using-mediapipe" target="_blank" class="project-title">
+                  Real-Time Facemesh Using Mediapipe Model
+                </a>
+                <p class="project-description">
+                  Implemented a real-time facial landmark detection system using MediaPipe's Face Mesh solution. This project enables efficient and accurate tracking of facial key points with minimal computational overhead, making it suitable for applications such as augmented reality (AR), virtual avatars, and facial expression analysis.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 19 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/virtial mouse.jpg')">
+                <img src="images/virtial mouse.jpg" alt="Virtual Mouse System" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Virtual-Mouse-with-MediaPipe-Handtracking-Model" target="_blank" class="project-title">
+                  Virtual Mouse with MediaPipe Hand Tracking Model
+                </a>
+                <p class="project-description">
+                  Developed a real-time virtual mouse system using MediaPipe's hand tracking model, enabling touch-free computer interaction through intuitive hand gestures. This system allows users to move the cursor, click, and perform actions using hand movements, demonstrating the potential of AI-powered human-computer interaction.
+                </p>
+              </header>
+            </div>
+
+            <!-- Project 20 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/bitcoin.png')">
+                <img src="images/bitcoin.png" alt="Bitcoin Volatility Forecasting" />
+              </a>
+              <header>
+                <a href="https://github.com/alirzx/Bitcoin-Volatility-Forcasting-Using-RNNs-and-Statistical-Methods" target="_blank" class="project-title">
+                  Bitcoin Volatility Forecasting Using RNNs and Statistical Methods
+                </a>
+                <p class="project-description">
+                  Developed an advanced forecasting model combining Recurrent Neural Networks (RNNs) with statistical techniques such as ARIMA, GARCH, and TARCH to predict Bitcoin price volatility. This hybrid model leverages both deep learning and time-series analysis to deliver accurate volatility predictions, providing valuable insights for investors and financial analysts aiming to make informed decisions in cryptocurrency markets.
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Honors & Awards Section -->
+      <section id="honors" class="projects-container" style="background-color: #ffffff;">
+        <div class="container">
+          <header>
+            <h2>Honors & Awards</h2>
+          </header>
+          <p>Recognition for excellence and innovation in the field of Artificial Intelligence and Machine Learning:</p>
+          
+          <div class="projects-grid">
+            <!-- Award 1 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/bino402.jpg')">
+                <img src="images/bino402.jpg" alt="Best AI Research Award" />
+              </a>
+              <header>
+                <h3 class="project-title">Best AI Research Award</h3>
+                <p class="project-description">
+                  Received the Best AI Research Award at the International Conference on Machine Learning Applications 2023 for innovative work on medical image analysis using deep learning techniques. The research demonstrated significant improvements in early disease detection accuracy compared to existing methods.
+                </p>
+              </header>
+            </div>
+
+            <!-- Award 2 -->
+            <div class="project">
+              <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/photo_5915591541093681521_y.jpg')">
+                <img src="images/photo_5915591541093681521_y.jpg" alt="Innovation Excellence Award" />
+              </a>
+              <header>
+                <h3 class="project-title">Innovation Excellence Award</h3>
+                <p class="project-description">
+                  Honored with the Innovation Excellence Award at the AI & Healthcare Summit 2022 for developing a novel approach to real-time medical diagnostics using computer vision. The project was recognized for its potential to transform healthcare delivery in resource-limited settings.
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates & Courses Section -->
+      <section id="certificates" class="three">
+        <div class="container">
+          <header>
+            <h2>Courses & Certifications</h2>
+          </header>
+          <p>Below are some of the courses and certifications I have completed in the field of AI and Machine Learning:</p>
+          <div class="courses-grid">
+            <!-- Course 1 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/smartech.jpg')">
+                  <img src="images/smartech.jpg" alt="Smartech National AI Bootcamp 2022" />
+                </a>
+                <header>
+                  <h3 class="project-title">Smartech National AI Bootcamp 2022</h3>
+                  <p>A comprehensive bootcamp on AI fundamentals, where I gained hands-on experience with machine learning algorithms and AI technologies.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 2 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/artificial intelligence.jpg')">
+                  <img src="images/artificial intelligence.jpg" alt="Understanding Artificial Intelligence" />
+                </a>
+                <header>
+                  <h3 class="project-title">Understanding Artificial Intelligence</h3>
+                  <p>This course helped me understand the key concepts of AI, including its applications in various industries and future trends.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 3 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/data engineering.jpg')">
+                  <img src="images/data engineering.jpg" alt="Understanding Data Engineering" />
+                </a>
+                <header>
+                  <h3 class="project-title">Understanding Data Engineering</h3>
+                  <p>Covered data pipeline construction, data architecture, and tools to manage and manipulate large-scale data efficiently.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 4 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/machine learning.jpg')">
+                  <img src="images/machine learning.jpg" alt="Understanding Machine Learning" />
+                </a>
+                <header>
+                  <h3 class="project-title">Understanding Machine Learning</h3>
+                  <p>Focused on the fundamentals of ML algorithms, including supervised and unsupervised learning, and their real-world applications.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 5 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/sql.jpg')">
+                  <img src="images/sql.jpg" alt="Introduction to SQL" />
+                </a>
+                <header>
+                  <h3 class="project-title">Introduction to SQL</h3>
+                  <p>Learned how to query databases using SQL, an essential skill for handling and extracting insights from large datasets.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 6 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/deep learning.jpg')">
+                  <img src="images/deep learning.jpg" alt="Introduction to Deep Learning with Torch" />
+                </a>
+                <header>
+                  <h3 class="project-title">Introduction to Deep Learning with Torch</h3>
+                  <p>Explored deep learning techniques using PyTorch, building and training neural networks for various AI tasks.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 7 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/genai.jpg')">
+                  <img src="images/genai.jpg" alt="Generative AI Concepts" />
+                </a>
+                <header>
+                  <h3 class="project-title">Generative AI Concepts</h3>
+                  <p>This course introduced me to the principles of generative models, such as GANs and VAEs, and their applications in creative AI tasks.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 8 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/ai ethics.jpg')">
+                  <img src="images/ai ethics.jpg" alt="AI Ethics" />
+                </a>
+                <header>
+                  <h3 class="project-title">AI Ethics</h3>
+                  <p>Focused on the ethical considerations of AI technologies, including bias, privacy, and the societal impact of AI systems.</p>
+                </header>
+              </article>
+            </div>
+            <!-- Course 9 -->
+            <div class="col">
+              <article class="item">
+                <a href="#" class="image fit" onclick="event.preventDefault(); openModal('images/eeg.jpg')">
+                  <img src="images/eeg.jpg" alt="Applications of AI in EEG and QEEG Data Analysis" />
+                </a>
+                <header>
+                  <h3 class="project-title">Applications of AI in EEG and QEEQ Data Analysis for Better Understanding Brain Function</h3>
+                  <p>Explored the use of AI to analyze EEG and QEEG data, enabling better understanding of brain activity and cognitive states.</p>
+                </header>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+          <header>
+            <h2>Contact</h2>
+          </header>
+
+          <p>If you'd like to get in touch, discuss collaboration opportunities, or just say hello, feel free to reach out! I'm always open to new ideas and conversations. You can contact me via email or connect with me on social media.</p>
+
+          <!-- Contact Form -->
+          <form id="contactForm" method="POST" action="https://formspree.io/f/mjkgrpkj">
+            <div class="row">
+              <div class="col-6">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+
+              <div class="col-6">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              </div>
+
+              <div class="col-12">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message..." rows="5" required></textarea>
+              </div>
+
+              <!-- Honeypot Field -->
+              <input type="text" name="_gotcha" style="display: none;">
+
+              <div class="col-12">
+                <input type="submit" value="Send Message" />
+              </div>
+            </div>
+          </form>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="success-message">
+            Message sent successfully! I'll get back to you soon.
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal for displaying images -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-navigation">
+        <button id="prevImage" class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <img class="modal-content" id="modalImage" />
+        <button id="nextImage" class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="image-counter" id="imageCounter">1 / 1</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom Scripts -->
+    <script>
+      // Define project and award galleries with multiple images
+      const projectGalleries = {
+        // Projects
+        "images/sport.png": ["images/sport.png", "images/sport2.jpg", "images/sport3.jpg"],
+        "images/mediapose.png": ["images/mediapose.png", "images/mediapose2.jpg", "images/mediapose3.jpg"],
+        "images/stress.png": ["images/stress.png", "images/stress2.jpg", "images/stress3.jpg"],
+        "images/cifar100.png": ["images/cifar100.png", "images/cifar100_2.jpg", "images/cifar100_3.jpg"],
+        "images/instance segmentation.png": ["images/instance segmentation.png", "images/instance segmentation2.jpg", "images/instance segmentation3.jpg"],
+        "images/mnist.png": ["images/mnist.png", "images/mnist2.jpg", "images/mnist3.jpg"],
+        "images/alzheimer.png": ["images/alzheimer.png", "images/alzheimer2.jpg", "images/alzheimer3.jpg"],
+        "images/MedMNIST.png": ["images/MedMNIST.png", "images/MedMNIST2.jpg", "images/MedMNIST3.jpg"],
+        "images/pnumonia.jpg": ["images/pnumonia.jpg", "images/pnumonia2.jpg", "images/pnumonia3.jpg"],
+        "images/skin.png": ["images/skin.png", "images/skin2.jpg", "images/skin3.jpg"],
+        "images/breast_mammogram.png": ["images/breast_mammogram.png", "images/breast_mammogram2.jpg", "images/breast_mammogram3.jpg"],
+        "images/covid.png": ["images/covid.png", "images/covid2.jpg", "images/covid3.jpg"],
+        "images/brain tumor.png": ["images/brain tumor.png", "images/brain tumor2.jpg", "images/brain tumor3.jpg"],
+        "images/aptos.png": ["images/aptos.png", "images/aptos2.jpg", "images/aptos3.jpg"],
+        "images/KNEE.jpg": ["images/KNEE.jpg", "images/KNEE2.jpg", "images/KNEE3.jpg"],
+        "images/cifar10.png": ["images/cifar10.png", "images/cifar10_2.jpg", "images/cifar10_3.jpg"],
+        "images/object.jpg": ["images/object.jpg", "images/object2.jpg", "images/object3.jpg"],
+        "images/facemesh.jpg": ["images/facemesh.jpg", "images/facemesh2.jpg", "images/facemesh3.jpg"],
+        "images/virtial mouse.jpg": ["images/virtial mouse.jpg", "images/virtial mouse2.jpg", "images/virtial mouse3.jpg"],
+        "images/bitcoin.png": ["images/bitcoin.png", "images/bitcoin2.jpg", "images/bitcoin3.jpg"],
+        
+        // Awards
+        "images/bino402.jpg": ["images/bino402.jpg", "images/award_ceremony1.jpg", "images/award_certificate1.jpg"],
+        "images/photo_5915591541093681521_y.jpg": ["images/photo_5915591541093681521_y.jpg", "images/award_ceremony2.jpg", "images/award_certificate2.jpg"],
+        
+        // Certificates (can also have multiple views if needed)
+        "images/smartech.jpg": ["images/smartech.jpg", "images/smartech_detail.jpg"],
+        "images/artificial intelligence.jpg": ["images/artificial intelligence.jpg", "images/ai_detail.jpg"],
+        "images/data engineering.jpg": ["images/data engineering.jpg", "images/data_eng_detail.jpg"],
+        "images/machine learning.jpg": ["images/machine learning.jpg", "images/ml_detail.jpg"],
+        "images/sql.jpg": ["images/sql.jpg", "images/sql_detail.jpg"],
+        "images/deep learning.jpg": ["images/deep learning.jpg", "images/dl_detail.jpg"],
+        "images/genai.jpg": ["images/genai.jpg", "images/genai_detail.jpg"],
+        "images/ai ethics.jpg": ["images/ai ethics.jpg", "images/ethics_detail.jpg"],
+        "images/eeg.jpg": ["images/eeg.jpg", "images/eeg_detail.jpg"]
+      };
+      
+      // Variables for modal gallery
+      let currentGallery = [];
+      let currentImageIndex = 0;
+      
+      // Function to open modal with multiple images
+      function openModal(imageSrc) {
+        // Get the gallery for this image
+        currentGallery = projectGalleries[imageSrc] || [imageSrc];
+        currentImageIndex = 0;
+        
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const imageCounter = document.getElementById("imageCounter");
+        
+        // Set the first image
+        modalImage.src = currentGallery[currentImageIndex];
+        
+        // Update the counter
+        imageCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
+        
+        // Show the modal
+        modal.style.display = "block";
+        
+        // Set button visibility based on gallery length
+        const prevBtn = document.getElementById("prevImage");
+        const nextBtn = document.getElementById("nextImage");
+        
+        if (currentGallery.length <= 1) {
+          prevBtn.style.display = "none";
+          nextBtn.style.display = "none";
+          imageCounter.style.display = "none";
+        } else {
+          prevBtn.style.display = "flex";
+          nextBtn.style.display = "flex";
+          imageCounter.style.display = "block";
+        }
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        var modal = document.getElementById("imageModal");
+        modal.classList.remove('show');
+        
+        // Wait for animation to complete before hiding
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 300);
+      }
+      
+      // Function to navigate to next image
+      function nextImage() {
+        if (currentGallery.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+        updateModalImage();
+      }
+      
+      // Function to navigate to previous image
+      function prevImage() {
+        if (currentGallery.length <= 1) return;
+        
+        currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateModalImage();
+      }
+      
+      // Function to update the modal image
+      function updateModalImage() {
+        const modalImage = document.getElementById("modalImage");
+        const imageCounter = document.getElementById("imageCounter");
+        
+        // Create a new image to preload
+        const newImage = new Image();
+        newImage.onload = function() {
+          // Fade out current image
+          modalImage.style.opacity = "0";
+          
+          // Change the source and fade back in after a short delay
+          setTimeout(() => {
+            modalImage.src = currentGallery[currentImageIndex];
+            modalImage.style.opacity = "1";
+            
+            // Update the counter
+            imageCounter.textContent = `${currentImageIndex + 1} / ${currentGallery.length}`;
+          }, 200);
+        };
+        
+        // Start loading the new image
+        newImage.src = currentGallery[currentImageIndex];
+      }
+
+      // Contact form submission handler
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('successMessage');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            successMessage.classList.add('visible');
+            form.reset();
+            setTimeout(() => {
+              successMessage.classList.remove('visible');
+            }, 5000);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      });
+
+      // Dark mode functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      
+      // Check for saved theme preference or prefer-color-scheme
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update icon
+        if (newTheme === 'dark') {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        } else {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        }
+      });
+      
+      // Scroll to top functionality
+      const scrollTopBtn = document.getElementById('scroll-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Project animations on scroll
+      const animateOnScroll = () => {
+        const projects = document.querySelectorAll('.project');
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        projects.forEach((project) => {
+          const projectTop = project.getBoundingClientRect().top;
+          
+          if (projectTop < triggerBottom) {
+            project.style.opacity = "1";
+            project.style.transform = "translateY(0)";
+          }
+        });
+      };
+      
+      // Initial check for elements in view
+      document.addEventListener('DOMContentLoaded', () => {
+        // Make sure all projects are visible initially
+        document.querySelectorAll('.project').forEach(project => {
+          project.style.opacity = "1";
+          project.style.transform = "translateY(0)";
+        });
+        
+        animateOnScroll();
+      });
+      window.addEventListener('scroll', animateOnScroll);
+
+      // Add smooth scrolling to all links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({  
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      // Add event listeners for modal navigation
+      document.getElementById('prevImage').addEventListener('click', prevImage);
+      document.getElementById('nextImage').addEventListener('click', nextImage);
+      
+      // Add keyboard navigation for modal
+      document.addEventListener('keydown', function(e) {
+        if (document.getElementById('imageModal').style.display === 'block') {
+          if (e.key === 'ArrowLeft') {
+            prevImage();
+          } else if (e.key === 'ArrowRight') {
+            nextImage();
+          } else if (e.key === 'Escape') {
+            closeModal();
+          }
+        }
+      });
+      
+      // Add animation class after modal is displayed
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('imageModal');
+        
+        // Add animation class after a short delay when modal is shown
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'style' && 
+                modal.style.display === 'block' && 
+                !modal.classList.contains('show')) {
+              setTimeout(() => {
+                modal.classList.add('show');
+              }, 10);
+            }
+          });
+        });
+        
+        observer.observe(modal, { attributes: true });
+      });
+    </script>
+  </body>
+</html>
