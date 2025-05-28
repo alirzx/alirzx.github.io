@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio - Personal Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+  <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">ML</li>
+        <li data-filter=".filter-product">Computer Vision</li>
+        <li data-filter=".filter-branding">Medical Imaging</li>
+        <li data-filter=".filter-books">Bio Medical Signal</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Existing Project: Sport100 (Moved to Computer Vision) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/sport.png" class="img-fluid" alt="Computer Vision Project 1">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Multi-Class Classification on Sport100 Dataset with 97% accuracy</p>
+              <a href="assets/img/portfolio/sport.png" title="Multi-Class Classification on Sport100 Dataset" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv1" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Existing Project: Human Pose Estimation (Computer Vision) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/mediapose.png" class="img-fluid" alt="Computer Vision Project 2">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Human pose estimation and tracking for self-coaching</p>
+              <a href="assets/img/portfolio/mediapose.png" title="Real-time Self-Coaching System" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv2" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/stress.png" class="img-fluid" alt="Computer Vision Project 3">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Virtual Emotion Detection Using YOLO</p>
+              <a href="assets/img/portfolio/stress.png" title="Virtual Emotion Detection" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv3" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+          <!-- New Project: Computer Vision Project 4 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/cifar100.png" class="img-fluid" alt="Computer Vision Project 4">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Multi-Class Classification on CIFAR-100 Using Transfer Learning</p>
+              <a href="assets/img/portfolio/cifar100.png" title="Multi-Class Classification on CIFAR-100 Using Transfer Learning" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv4" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+          <!-- New Project: Computer Vision Project 5 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/instance segmentation.png" class="img-fluid" alt="Computer Vision Project 5">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Real-Time Instance Segmentation Using YOLOv8</p>
+              <a href="assets/img/portfolio/instance segmentation.png" title="Real-Time Instance Segmentation Using YOLOv8" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv5" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 6 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/MNist1.png" class="img-fluid" alt="Computer Vision Project 5">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>MNIST Image Generation Using GAN Model</p>
+              <a href="assets/img/portfolio/MNist1.png" title="MNist dataset Image Generation Using Generative Adversarial Networks(GAN)" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv6" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 7 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/cifar10.png" class="img-fluid" alt="Computer Vision Project 7">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>CIFAR-10 Multi-Class Classification Using YOLO and Custom CNN</p>
+              <a href="assets/img/portfolio/cifar10.png" title="CIFAR-10 Multi Class Classification Using Deep CNNs" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv7" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/object1.jpeg" class="img-fluid" alt="Computer Vision Project 7">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Real-time Object Detection Using YOLOv8 model</p>
+              <a href="assets/img/portfolio/object1.jpeg" title="Real-time Object Detection Using YOLOv8 model" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv8" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 9 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/facemesh.png" class="img-fluid" alt="Computer Vision Project 7">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p> Real-Time Facemesh Using Mediapipe Model</p>
+              <a href="assets/img/portfolio/facemesh.png" title="Real-Time Facemesh Using Mediapipe Model" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv9" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 10 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/virtial mouse.jpg" class="img-fluid" alt="Computer Vision Project 7">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Virtual Mouse with MediaPipe Hand Tracking Model</p>
+              <a href="assets/img/portfolio/virtial mouse.jpg" title="Virtual Mouse with MediaPipe Hand Tracking Model" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv10" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Computer Vision Project 11 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/eye.png" class="img-fluid" alt="Computer Vision Project 7">
+            <div class="portfolio-info">
+              <h4>Computer Vision Project</h4>
+              <p>Eye Glasses Recommendataion System</p>
+              <a href="assets/img/portfolio/virtial eye.png" title="Eye glassses Recommendataion system" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=cv11" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      
+
+      
+
+
+        <!-- Existing Project: Alzheimer's Detection (Medical Imaging) -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/alzheimer.png" class="img-fluid" alt="Medical Imaging Project 1">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Alzheimer's Detection and Multi-Class Classification Using CNN and Pretrained Model</p>
+              <a href="assets/img/portfolio/alzheimer.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical1" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/MedMNIST.png" class="img-fluid" alt="Medical Imaging Project 2">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Medical MNIST Classification Resnext50(6Class Dataset)</p>
+              <a href="assets/img/portfolio/MedMNIST.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical2" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 3 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/pnumonia.jpeg" class="img-fluid" alt="Medical Imaging Project 3">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Pneumonia Classification Using Deep CNN</p>
+              <a href="assets/img/portfolio/pnumonia.jpeg" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical3" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 4 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/skin.png" class="img-fluid" alt="Medical Imaging Project 4">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Skin Cancer Detection Using Transfer Learning and Pretrained Models</p>
+              <a href="assets/img/portfolio/skin.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical4" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 5 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/breast_mammogram.png" class="img-fluid" alt="Medical Imaging Project 5">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Binary Breast Cancer Detection on Mammogram Images Using Deep Neural Network Models</p>
+              <a href="assets/img/portfolio/breast_mammogram.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical5" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>x
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 6 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/covid.jpg" class="img-fluid" alt="Medical Imaging Project 6">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Covid19 Detection Using Pretrained Models</p>
+              <a href="assets/img/portfolio/covid.jpg" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical6" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 7 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/brain tumor.png" class="img-fluid" alt="Medical Imaging Project 7">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Brain Tumour Multi-Class Classification Using Custom CNN and Pretrained Models</p>
+              <a href="assets/img/portfolio/brain tumor.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical7" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/aptos.png" class="img-fluid" alt="Medical Imaging Project 8">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Diabetic Retinopathy Detection</p>
+              <a href="assets/img/portfolio/aptos.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical8" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 9 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/KNEE.jpg" class="img-fluid" alt="Medical Imaging Project 9">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Knee Osteoarthritis Classification</p>
+              <a href="assets/img/portfolio/KNEE.jpg" title="Knee Osteoarthritis Classification" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical9" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 10 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/breast_mri.jpg" class="img-fluid" alt="Medical Imaging Project 10">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Binary Breast Cancer Classification Using MRI Images</p>
+              <a href="assets/img/portfolio/breast_mri.jpg" title="Binary Breast Cancer Classification Using MRI Images" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical10" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 11 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/electron.png" class="img-fluid" alt="Medical Imaging Project 10">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Electrone Particle Segmentation Using YOLO</p>
+              <a href="assets/img/portfolio/electron.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical11" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Medical Imaging Project 11 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/breast_histo.png" class="img-fluid" alt="Medical Imaging Project 10">
+            <div class="portfolio-info">
+              <h4>Medical Imaging Project</h4>
+              <p>Histopatholagical images Binary Classification for Breast Cancer Detection</p>
+              <a href="assets/img/portfolio/breast_histo.png" title="Medical Imaging Project" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=medical12" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+
+
+        <!-- Existing Project: Bio Medical Signal Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/eegproject.png" class="img-fluid" alt="Bio Medical Signal Project 1">
+            <div class="portfolio-info">
+              <h4>Bio Medical Signal Project</h4>
+              <p>Analysis of biomedical signals for health monitoring</p>
+              <a href="assets/img/portfolio/eegproject.png" title="Bio Medical Signal Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=biomed1" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- New Project: Bio Medical Signal Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/HandMovement.png" class="img-fluid" alt="Bio Medical Signal Project 2">
+            <div class="portfolio-info">
+              <h4>Bio Medical Signal Project</h4>
+              <p>Hand Movement Recognition Using EEG Brainwave</p>
+              <a href="assets/img/portfolio/HandMovement.png" title="Bio Medical Signal Project" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=biomed2" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Existing Project: ML Project 1 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/bitcoin.png" class="img-fluid" alt="ML Project 1">
+            <div class="portfolio-info">
+              <h4>ML Project</h4>
+              <p>Bitcoin Volatility Forecasting Using RNNs and Statistical Methods</p>
+              <a href="assets/img/portfolio/bitcoin.png" title="ML Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=ml1" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Existing Project: ML Project 2 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/heart.jpg" class="img-fluid" alt="ML Project 2">
+            <div class="portfolio-info">
+              <h4>ML Project</h4>
+              <p>Heart Failure Predection Using ML & DL algorithms</p>
+              <a href="assets/img/portfolio/heart.jpg" title="Heart Failure Predection Using ML & DL algorithms" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html?project=ml2" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Container -->
+    </div>
+  </div>
+</section><!-- /Portfolio Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename"></h3>
+      <p></p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">NXTHING</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">VXID</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

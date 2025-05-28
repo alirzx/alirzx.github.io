@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename"></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Publicatations</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="Honors&Awards.html">Honors & Awards</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+        
+
+    </div>
+  </header>
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 id="page-title">Portfolio Details</h1>
+              <p class="mb-0">Details of the selected project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Portfolio Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center" id="swiper-wrapper">
+                <!-- Images will be populated by JavaScript -->
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong>: <span id="category"></span></li>
+                <li><strong>Task</strong>: <span id="task"></span></li>
+                <li><strong>Project Date</strong>: <span id="date"></span></li>
+                <li><strong>Project URL</strong>: <a id="url" href="#" target="_blank"></a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2 id="description-title"></h2>
+              <p id="description-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename"></h3>
+      <p></p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">NXTHING</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">VXID</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Dynamic Content Loading Script -->
+  <script>
+    const projects = {
+      cv1: {
+        title: "Multi-Class Classification on Sport100 Dataset",
+        category: "Computer Vision",
+        task: "Multi-Class Classification",
+        date: "01 March, 2022",
+        url: "https://github.com/alirzx/Sport-Genre-100-Class-Classification",
+        description: "Designed and implemented a deep learning model for multi-class classification on the Sport100 dataset, accurately distinguishing between 100 different sports categories. Leveraged transfer learning with pretrained models such as ResNet18, ResNet50, and YOLOv8m, achieving over 97% accuracy with YOLO. Employed fine-tuning, data augmentation, and optimization techniques to enhance model performance. This project showcases the power of AI in large-scale image classification tasks, demonstrating the effectiveness of deep learning in recognizing complex visual patterns.",
+        images: ["assets/img/portfolio/sport.png"]
+      },
+      cv2: {
+        title: "realtime selfcotching system",
+        category: "Computer Vision",
+        task: "Human Pose Estimation(HPE)",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Selfcotching_project",
+        description: "An advanced AI-powered fitness assistant that utilizes MediaPipe and YOLO-based pose estimation to analyze body movements in real time. The system detects and evaluates Squats and Lateral Double Raises, providing instant feedback on posture correctness while counting both correct and incorrect repetitions. By leveraging computer vision and deep learning, this self-coaching solution enhances workout efficiency, ensuring users maintain proper form without needing a personal trainer. 🚀💪",
+        images: ["assets/img/portfolio/mediapose.png"]
+      },
+      cv3: {
+        title: "Virtual Emotion Classification",
+        category: "Computer Vision",
+        task: "Multi-Class Classification",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Emotion-Detection-using-YOLO-Large-Scale-Dataset-with-98-accuracy-",
+        description: "Developed a high-accuracy emotion classification model to distinguish between stress and non-stress states using large-scale, high-quality data. Leveraged ResNet-18, ResNet-50, and YOLO for feature extraction and classification, achieving over 98% accuracy with YOLO. This project demonstrates the effectiveness of deep learning in mental health analysis, providing a robust solution for real-time emotion detection.",
+        images: ["assets/img/portfolio/stress.png"]
+      },
+
+      cv4: {
+        title: "CIFAR100 Classification",
+        category: "Computer Vision",
+        task: "Multi-Class Classification",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Cifar100-Multi-Class-Classification-Using-Pretrained-Models",
+        description: "Developed a deep learning model for multi-class image classification on the CIFAR-100 dataset, utilizing transfer learning with various pretrained models, including YOLOv8 and other state-of-the-art architectures. Implemented fine-tuning, data augmentation, and optimization strategies to enhance model generalization and accuracy. This project highlights the application of deep learning in complex image recognition tasks, demonstrating the effectiveness of pretrained models in handling diverse object categories.",
+        images: ["assets/img/portfolio/cifar100.png"]
+      },
+
+      cv5: {
+        title: "Real-Time Instance Segmentation Using YOLOv8",
+        category: "Computer Vision",
+        task: "Instance Segmentation",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Real-time-Instance-Segmentation-Using-YOLOv8",
+        description: "Implemented a real-time instance segmentation system using YOLOv8, enabling precise object detection and segmentation in dynamic environments through a user-friendly web app built with Streamlit. This solution empowers users to perform accurate, on-the-fly analysis for a wide range of applications.",
+        images: ["assets/img/portfolio/instance segmentation.png"]
+      },
+
+      cv6: {
+        title: "MNISt dataset Image Generation Using GAN",
+        category: "Computer Vision",
+        task: "Image Generation",
+        date: "15 June, 2022",
+        url: "https://github.com/alirzx/MNIST-Generation-Using-GAN",
+        description: "Developed a Generative Adversarial Network (GAN) to generate high-quality, synthetic images from the MNIST dataset. This project showcases my expertise in generative AI, leveraging advanced machine learning techniques to create realistic handwritten digit images. The model demonstrates the power of GANs in learning complex data distributions and generating new samples that closely resemble real-world data.",
+        images: ["assets/img/portfolio/mnist.png"]
+      },
+
+      cv7: {
+        title: "CIFAR10 Multi Class Classification",
+        category: "Computer Vision",
+        task: "Multi-Class Classification",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Cifar10-Classification-using-Custom-CNN-and-pretrained-Models",
+        description: "Implemented a real-time instance segmentation system using YOLOv8, enabling precise object detection and segmentation in dynamic environments through a user-friendly web app built with Streamlit. This solution empowers users to perform accurate, on-the-fly analysis for a wide range of applications.",
+        images: ["assets/img/portfolio/cifar10.png"]
+      },
+
+      cv8: {
+        title: "Real-time Object Detection Using YOLOv8 model",
+        category: "Computer Vision",
+        task: "Object Detection",
+        date: "15 June, 2022",
+        url: "https://github.com/alirzx/Real-Time-Object-Detection-Using-Pretrained-Yolov8-Model-On-Webcam",
+        description: "Developed a real-time object detection system using YOLOv8 models, enabling users to detect objects from images or live webcam feeds. The application was deployed using Streamlit, allowing users to select different YOLO models and save detection results. This project demonstrates the power of deep learning in real-time vision tasks, providing a user-friendly interface for object recognition.",
+        images: ["assets/img/portfolio/object1.jpeg"]
+      },
+
+      cv9: {
+        title: "Real-Time Facemesh Using Mediapipe Model",
+        category: "Computer Vision",
+        task: "FaceMesh & Pose estimation & Tracking",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Realtime-Facemesh-Using-mediapipe",
+        description: "Implemented a real-time facial landmark detection system using MediaPipe's Face Mesh solution. This project enables efficient and accurate tracking of facial key points with minimal computational overhead, making it suitable for applications such as augmented reality (AR), virtual avatars, and facial expression analysis.",
+        images: ["assets/img/portfolio/facemesh.jpg"]
+      },
+
+      cv10: {
+        title: "Virtual Mouse with MediaPipe Hand Tracking Model",
+        category: "Computer Vision",
+        task: "Pose estimation & Tracking",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Virtual-Mouse-with-MediaPipe-Handtracking-Model",
+        description: "Developed a real-time virtual mouse system using MediaPipe's hand tracking model, enabling touch-free computer interaction through intuitive hand gestures. This system allows users to move the cursor, click, and perform actions using hand movements, demonstrating the potential of AI-powered human-computer interaction.",
+        images: ["assets/img/portfolio/virtial mouse.jpg"]
+      },
+
+       cv11: {
+        title: "Eye Glassses Recommendation System",
+        category: "Computer Vision",
+        task: "Multi-Class Classification",
+        date: "15 June, 2023",
+        url: "https://github.com/alirzx/Human-Face-Shapes-Classification",
+        description: "This project focuses on classifying human face shapes into five distinct categories using a custom Convolutional Neural Network (CNN). Accurately determining face shapes has practical applications in areas such as personalized recommendations for hairstyles, eyewear, and cosmetics.",
+        images: ["assets/img/portfolio/eye.png"]
+      },
+
+      medical1: {
+        title: "Alzheimer's Detection and Multi-Class Classification Using CNN and Pretrained Model",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Alzheimer-s-Detection-and-Multi-Class-Classification-using-Cnn-and-pretrained-model",
+        description: "Developed a deep learning model for early detection and classification of Alzheimer's disease stages using Convolutional Neural Networks (CNNs) and pretrained models. This solution enhances the accuracy of medical diagnoses, facilitating early intervention and improved healthcare outcomes.",
+        images: ["assets/img/portfolio/alzheimer"]
+      },
+
+      medical2: {
+        title: "Medical MNIST Classification Resnext50(6Class Dataset)",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Medical-MNIST-Classification-with-100-test-accuracy",
+        description: "Fine-tuned the ResNeXt-50 model to classify medical conditions using the Medical MNIST dataset, achieving 100% accuracy on the test set. By leveraging the power of a pre-trained ResNeXt-50 model, the system was adapted for medical image classification with advanced techniques such as transfer learning, data augmentation, and mixed precision training. The model's performance was further enhanced through optimization of loss functions and evaluation with metrics like classification reports and confusion matrix. This project highlights the effectiveness of deep learning in medical diagnostics, demonstrating how fine-tuning pre-trained models can lead to exceptional results in healthcare applications.",
+        images: ["assets/img/portfolio/MedMNIST.png"]
+      },
+
+      medical3: {
+        title: "Pneumonia Classification Using Deep CNN",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Pneumonia-Classification-Using-Deep-CNN",
+        description: "Designed and implemented a deep learning-based pneumonia detection system using Convolutional Neural Networks (CNNs) on chest X-ray images. Leveraged transfer learning with pretrained models to enhance classification accuracy, contributing to automated medical diagnostics and early disease detection.",
+        images: ["assets/img/portfolio/pnumonia.jpg"]
+      },
+
+      medical4: {
+        title: "Skin Cancer Detection Using Transfer Learning and Pretrained Models",
+        category: "Medical Imaging",
+        task: "Binary Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Skin-Cancer-Classification",
+        description: "Designed and implemented a deep learning-based skin cancer classification system to distinguish between benign and malignant lesions. Leveraged both custom CNN architectures and state-of-the-art pre-trained models, including ResNet, DenseNet, VGG, and Inception v3, to enhance feature extraction and improve classification accuracy. The model was trained using extensive data preprocessing, augmentation techniques, and optimization strategies to achieve high performance. This project showcases the potential of AI in dermatology, aiding in early detection and diagnosis of skin cancer through automated image analysis.",
+        images: ["assets/img/portfolio/skin.png"]
+      },
+
+      medical5: {
+        title: "Binary Breast Cancer Detection on Mammogram Images Using Deep Neural Network Models",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Breast-Cancer-Binary-Mamogram-Image-Classification-Using-Custom-CNN-and-Pretrained-Models",
+        description: "Developed a deep learning-based system for binary classification of breast cancer using mammogram images, distinguishing between malignant and benign cases. Implemented state-of-the-art models, including YOLO for advanced feature detection and EfficientNet and ResNet18 for robust classification. Leveraged transfer learning and optimized training techniques to enhance accuracy and generalization. This project highlights the application of AI in medical imaging, contributing to early breast cancer detection and improving diagnostic efficiency in healthcare.",
+        images: ["assets/img/portfolio/breast_mammogram.png"]
+      },
+
+      medical6: {
+        title: "Covid19 Detection Using Pretrained Models",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Alzheimer-s-Detection-and-Multi-Class-Classification-using-Cnn-and-pretrained-model",
+        description: "Developed a deep learning model for binary classification of COVID-19 using chest X-ray images, distinguishing between COVID-positive and healthy cases. Utilized pretrained models such as ResNet18, VGG, DenseNet, and EfficientNet alongside a custom CNN to enhance feature extraction and classification accuracy. Applied transfer learning and optimization techniques to improve model generalization. This project demonstrates the role of AI in accelerating COVID-19 detection, aiding in automated diagnostics and medical decision-making.",
+        images: ["assets/img/portfolio/covid.png"]
+      },
+
+      medical7: {
+        title: "Multi Class Brain Tumour Classification",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Brain-Tumor-Multi-Class-Classification",
+        description: "Developed and fine-tuned convolutional neural networks (CNNs) for multi-class classification of brain tumor images. Leveraged a combination of custom architectures and state-of-the-art pretrained models to achieve an impressive 97% accuracy, demonstrating proficiency in advanced image classification tasks.",
+        images: ["assets/img/portfolio/brain tumor.png"]
+      },
+
+      medical8: {
+        title: "Diabetic Retinopathy Detection",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/diabetic-retinopathy-Classification",
+        description: "Developed a deep learning model for multi-class image classification on the APTOS 2019 (JPG) dataset, utilizing transfer learning with various pretrained models, including ResNeXt-50 and other state-of-the-art architectures like Xception model. Implemented fine-tuning, data augmentation, and optimization strategies to enhance model generalization and accuracy. This project highlights the application of deep learning in complex image recognition tasks, demonstrating the effectiveness of pretrained models in handling diverse object categories.",
+        images: ["assets/img/portfolio/aptos.png"]
+      },
+
+      medical9: {
+        title: "Knee Osteoarthritis Classification",
+        category: "Medical Imaging",
+        task: "Multi-Class Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Knee-Osteoarthritis-Detection-Using-YOLO",
+        description: "This project focuses on classifying knee osteoarthritis severity using medical images. The dataset includes labeled classes such as Normal,Osteopenia, and Osteoporosis. I implemented ResNeXt50, a powerful convolutional neural network, to accurately classify the images into their respective categories.",
+        images: ["assets/img/portfolio/KNEE.jpg"]
+      },
+
+      medical10: {
+        title: "Binary BreastCancer Classification Using MRI Images",
+        category: "Medical Imaging",
+        task: "Binary Classification",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Breast-Cancer-Classification-using-Deep-Learning",
+        description: "Developed a deep learning model for detection and classification of BreastCancer's disease stages using Convolutional Neural Networks (CNNs) and pretrained models. This solution enhances the accuracy of medical diagnoses, facilitating early intervention and improved healthcare outcomes.",
+        images: ["assets/img/portfolio/breast_mri.jpg"]
+      },
+
+      medical11: {
+        title: "Electrone Particle Segmentation Using YOLO Models",
+        category: "Medical Imaging",
+        task: "Segmentation",
+        date: "20 August, 2022",
+        url: "https://github.com/alirzx/Breast-Cancer-Classification-using-Deep-Learning",
+        description: "Developed a deep learning model for detection and Segmentaion of Electrone Particles's using deep Convolutional Neural Networks (CNNs) and pretrained models Arcitucture like YOLO series. This solution enhances the accuracy of medical diagnoses, facilitating early intervention and improved healthcare outcomes.",
+        images: ["assets/img/portfolio/electron.png"]
+      },
+
+      medical12: {
+        title: "Binary BreastCancer Classification with Histopatholagical Images",
+        category: "Medical Imaging",
+        task: "Classification",
+        date: "3 April, 2024",
+        url: "X",
+        description: "This study introduces a deep learning model using ResNeXt50 for binary classification of breast tumors from BreaKHis dataset images. Fine-tuned with data augmentation, a hybrid loss function, and adaptive learning, it achieves 99.37% accuracy and 0.9976 AUC-ROC, offering a scalable solution for breast cancer diagnostics in digital pathology.",
+        images: ["assets/img/portfolio/breast_histo.png"]
+      },
+
+      
+      biomed1: {
+        title: "Emotion Recognition with 1D CNN using EEG Processing",
+        category: "Bio Medical Signal",
+        task: "Signal Analysis & Classification",
+        date: "10 January, 2023",
+        url: "https://github.com/alirzx/feeling-emotions-Classification-Using-Brainwave-EEG-Modeling",
+        description: "This project utilizes a 1D Convolutional Neural Network (CNN) to classify emotions from an unspecified EEG dataset, achieving an outstanding 99% test accuracy. The model, developed with PyTorch, leverages advanced techniques including AdamW optimization, dropout for regularization, and early stopping to ensure reliable and robust performance. Preprocessing involves feature normalization and stratified splitting to preserve data integrity. This highly accurate solution showcases the effectiveness of 1D CNNs for real-time emotion detection in brain-computer interface applications.",
+        images: ["assets/img/portfolio/eegproject.png"]
+      },
+
+      biomed2: {
+        title: "Emotion Recognition with 1D CNN using EEG Processing",
+        category: "Bio Medical Signal",
+        task: "Signal Analysis & Classification",
+        date: "10 January, 2023",
+        url: "https://github.com/alirzx/Hand-Movement-Classification-Using-EEG-data-and-Hybrid-Models",
+        description: "The objective of this project is to develop and evaluate machine learning models for classifying EEG signals captured during hand movements. The dataset comprises preprocessed EEG recordings from 14 channels, transformed into frequency domain features. Various deep learning architectures are implemented and compared to determine the most effective approach for EEG signal classification.",
+        images: ["assets/img/portfolio/HandMovement.png"]
+      },
+
+
+      ml1: {
+        title: "bitcoin Volatility Forecasting",
+        category: "Machine Learning",
+        task: "Predictive Modeling for Bitcoin Volatility",
+        date: "05 April, 2023",
+        url: "https://github.com/alirzx/Bitcoin-Volatility-Forcasting-Using-RNNs-and-Statistical-Methods",
+        description: "Developed an advanced forecasting model combining Recurrent Neural Networks (RNNs) with statistical techniques such as ARIMA, GARCH, and TARCH to predict Bitcoin price volatility. This hybrid model leverages both deep learning and time-series analysis to deliver accurate volatility predictions, providing valuable insights for investors and financial analysts aiming to make informed decisions in cryptocurrency markets.",
+        images: ["assets/img/portfolio/bitcoin.png"]
+      },
+      ml2: {
+        title: "Heart Failure Predection",
+        category: "Machine Learning",
+        task: "Multi-Class Classification",
+        date: "04 April, 2022",
+        url: "https://github.com/alirzx/Heart-Failure-Prediction-Using-ML-Algorithms",
+        description: "Developed an advanced Classification models based on Machine Learning Techniques in order to Classifying Heart Failures",
+        images: ["assets/img/portfolio/heart.jpg"]
+      },
+
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('project');
+      if (projectId && projects[projectId]) {
+        const project = projects[projectId];
+        // Update page title
+        document.getElementById('page-title').textContent = `${project.title} Details`;
+        // Update project info
+        document.getElementById('category').textContent = project.category;
+        document.getElementById('task').textContent = project.task;
+        document.getElementById('date').textContent = project.date;
+        document.getElementById('url').href = project.url;
+        document.getElementById('url').textContent = project.url;
+        // Update description
+        document.getElementById('description-title').textContent = project.title;
+        document.getElementById('description-text').textContent = project.description;
+        // Update slider images
+        const swiperWrapper = document.getElementById('swiper-wrapper');
+        swiperWrapper.innerHTML = '';
+        project.images.forEach(img => {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          slide.innerHTML = `<img src="${img}" alt="${project.title}">`;
+          swiperWrapper.appendChild(slide);
+        });
+        // Reinitialize Swiper
+        new Swiper('.portfolio-details-slider', {
+          loop: true,
+          speed: 600,
+          autoplay: { delay: 5000 },
+          slidesPerView: 'auto',
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      } else {
+        document.querySelector('.portfolio-description').innerHTML = '<p>Project not found.</p>';
+      }
+    });
+  </script>
+
+</body>
+</html>
