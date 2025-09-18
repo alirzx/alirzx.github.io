@@ -27,6 +27,9 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  
+
+
   <style>
     .services-list a {
       display: block;
@@ -48,6 +51,33 @@
     .paper-section {
       padding: 40px 0;
     }
+
+    .mySwiper .swiper-slide img {
+  max-width: 70%;      /* Don't overflow column width */
+  max-height: 50px;    /* Limit height */
+  object-fit: contain;  /* Keep aspect ratio, show full image */
+  display: block;
+  margin: 0 auto;       /* Center horizontally */
+}
+
+.mySwiper {
+  margin-bottom: 5px;  /* space between slider and content */
+}
+
+.paper-section p {
+  text-align: justify;      /* makes text fully justified */
+  text-justify: inter-word; /* distributes space between words nicely */
+  font-size: 20px;       /* slightly larger text */
+  line-height: 1.6;      /* spacing between lines */
+}
+
+
+@media (min-width: 992px) {
+  .mySwiper .swiper-slide img {
+    max-height: 350px;
+  }
+}
+
   </style>
 </head>
 
@@ -56,7 +86,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Research Hub</h1>
+        <h1 class="sitename"></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -76,6 +106,8 @@
   </header>
 
   <main class="main">
+
+   
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -102,12 +134,10 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Paper Details Section -->
     <section id="service-details" class="service-details section">
-
       <div class="container">
         <div class="row gy-4">
-
+    
           <!-- Left Menu -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
@@ -118,7 +148,27 @@
               <a href="#results">Evaluation & Results</a>
             </div>
           </div>
-
+    
+          <!-- Right Column: slider + content -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+    
+            <!-- Slider -->
+            <div class="swiper mySwiper mb-4">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/data_sample.png" class="img-fluid" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/framework.png" class="img-fluid" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/matrix.png" class="img-fluid" alt="Slide 3"></div>
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/performance.png" class="img-fluid" alt="Slide 4"></div>
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/table.png" class="img-fluid" alt="Slide 5"></div>
+                <div class="swiper-slide"><img src="assets/img/papers/paper1/results_sample.png" class="img-fluid" alt="Slide 6"></div>
+              </div>
+              <!-- Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+    
+              
           <!-- Right Content -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
@@ -188,27 +238,6 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Research Hub</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Research Hub</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -234,6 +263,27 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Swiper JS -->
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
 
 </body>
 
