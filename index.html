@@ -70,11 +70,11 @@
 
       <img src="assets/img/neuron.jpg" alt="" data-aos="fade-in">
 
-      <div class="container" data-aos="zoom-out" data-aos-delay="200" style="margin-top: -300px;">
+      <div class="container hero-text" data-aos="zoom-out" data-aos-delay="200" style="margin-top: -300px;">
         <h2>Alireza Hashemi</h2>
         <p>I'm <span class="typed"></span><span class="typed-cursor typed-cursor--blink"></span></p>
-
-        </div>
+      </div>
+      
     </section><!-- /Hero Section -->
 
   </main>
@@ -149,4 +149,11 @@
 </script>
 
 
-
+<style>
+/* Only for mobile devices */
+@media screen and (max-width: 767px) {
+  .hero-text {
+    margin-top: -400px !important; /* increase negative value to move it further up */
+  }
+}
+</style>
