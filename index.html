@@ -70,17 +70,11 @@
 
       <img src="assets/img/neuron.jpg" alt="" data-aos="fade-in">
 
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="container" data-aos="zoom-out" data-aos-delay="200" style="margin-top: -300px;">
         <h2>Alireza Hashemi</h2>
-        <p>I'm <span class="typed" data-typed-items="AI Research Engineer,Machine Learning Engineer, Computer Vision engineer, Medical Imaging Researcher, Neuroimaging Researcher"></span><span class="typed-cursor typed-cursor--blink"></span></p>
-        <!-- <div class="social-links">
-          <a href="#"><i class="bi bi-twitter-x"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/alireza-hashemi6996"><i class="bi bi-linkedin"></i></a>
-        </div> -->
-      </div>
+        <p>I'm <span class="typed"></span><span class="typed-cursor typed-cursor--blink"></span></p>
 
+        </div>
     </section><!-- /Hero Section -->
 
   </main>
@@ -135,3 +129,24 @@
 </body>
 
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var typed = new Typed('.typed', {
+      strings: [
+        "AI Research Engineer",
+        "Machine Learning Engineer",
+        "Computer Vision Engineer",
+        "Medical Imaging Researcher",
+        "Neuroimaging Researcher"
+      ],
+      typeSpeed: 70,   // faster typing
+      backSpeed: 20,   // faster deleting
+      backDelay: 520,  // shorter pause before deleting
+      loop: true
+    });
+  });
+</script>
+
+
+
