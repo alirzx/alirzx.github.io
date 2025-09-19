@@ -62,7 +62,7 @@
     /* Smaller height on small devices to avoid huge images pushing content */
     @media (max-width: 767.98px) {
       .portfolio-content img {
-        height: 180px;
+        height: 250px;
       }
     }
 
@@ -137,6 +137,30 @@
       background: rgba(0, 123, 255, 0.12);
       color: #007bff;
     }
+
+    .project-tags {
+  margin-top: 1px;
+}
+
+.project-tags .tag {
+  display: inline-block;
+  background-color: #13be35;
+  color: #333;
+  font-size: 0.63rem;
+  font-weight: 100;
+  padding: 1px 3px;
+  border-radius: 5px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  transition: background 0.3s;
+}
+
+/* .project-tags .tag:hover {
+  background-color: #19c45d;
+  color: #fff;
+  cursor: default;
+} */
+
   </style>
 </head>
 
@@ -180,6 +204,7 @@
             <li data-filter=".filter-product" role="tab">Computer Vision</li>
             <li data-filter=".filter-branding" role="tab">Medical Imaging</li>
             <li data-filter=".filter-books" role="tab">Bio Medical Signal</li>
+            <li data-filter=".filter-books" role="tab">Natural Language Processing</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" id="portfolio-container">
@@ -192,6 +217,13 @@
                 <div class="portfolio-info">
                   <h4>Computer Vision Project</h4>
                   <p>Multi-Class Classification on Sport100 Dataset with 97% accuracy</p>
+                  
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <a href="assets/img/portfolio/sport.png" title="Multi-Class Classification on Sport100 Dataset"
                     data-gallery="portfolio-gallery-product" class="glightbox preview-link" aria-label="Open image"><i
                       class="bi bi-zoom-in"></i></a>
@@ -208,6 +240,12 @@
                   alt="Human pose estimation and tracking for self-coaching" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Computer Vision Project</h4>
+                  <div class="project-tags">
+                  <span class="tag">Pretrained Model</span>
+                    <span class="tag">MediaPipe</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Streamlit</span>
+                  </div>
                   <p>Human pose estimation and tracking for self-coaching</p>
                   <a href="assets/img/portfolio/mediapose.png" title="Real-time Self-Coaching System"
                     data-gallery="portfolio-gallery-product" class="glightbox preview-link" aria-label="Open image"><i
@@ -225,6 +263,12 @@
                   loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Computer Vision Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">YOLO</span>
+                      
+                      <span class="tag">OpenCV</span>
+                      
+                    </div>
                   <p>Virtual Emotion Detection Using YOLO</p>
                   <a href="assets/img/portfolio/stress.png" title="Virtual Emotion Detection"
                     data-gallery="portfolio-gallery-product" class="glightbox preview-link" aria-label="Open image"><i
