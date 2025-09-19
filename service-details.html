@@ -27,9 +27,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  
-
-
   <style>
     .services-list a {
       display: block;
@@ -52,32 +49,32 @@
       padding: 40px 0;
     }
 
+    /* Swiper Slide Images - mobile responsive and clickable */
     .mySwiper .swiper-slide img {
-  max-width: 70%;      /* Don't overflow column width */
-  max-height: 50px;    /* Limit height */
-  object-fit: contain;  /* Keep aspect ratio, show full image */
-  display: block;
-  margin: 0 auto;       /* Center horizontally */
-}
+      width: 100%; /* full width of container */
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer; /* indicate clickable */
+    }
 
-.mySwiper {
-  margin-bottom: 5px;  /* space between slider and content */
-}
+    .mySwiper {
+      margin-bottom: 5px; /* space between slider and content */
+    }
 
-.paper-section p {
-  text-align: justify;      /* makes text fully justified */
-  text-justify: inter-word; /* distributes space between words nicely */
-  font-size: 20px;       /* slightly larger text */
-  line-height: 1.6;      /* spacing between lines */
-}
+    .paper-section p {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
-
-@media (min-width: 992px) {
-  .mySwiper .swiper-slide img {
-    max-height: 350px;
-  }
-}
-
+    @media (min-width: 992px) {
+      .mySwiper .swiper-slide img {
+        max-height: 350px;
+      }
+    }
   </style>
 </head>
 
@@ -101,13 +98,10 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
   <main class="main">
-
-   
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -118,7 +112,6 @@
               <h1>Breast Cancer Classification using ResNeXt50_32x4d with Hybrid Loss</h1>
               <p class="mb-0">
                 Authors: A. Hashemi ,K. Azizi ,M.K. Titkanlou ,R. Mouček<br>
-                
               </p>
             </div>
           </div>
@@ -137,7 +130,7 @@
     <section id="service-details" class="service-details section">
       <div class="container">
         <div class="row gy-4">
-    
+
           <!-- Left Menu -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
@@ -148,30 +141,52 @@
               <a href="#results">Evaluation & Results</a>
             </div>
           </div>
-    
+
           <!-- Right Column: slider + content -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-    
+
             <!-- Slider -->
             <div class="swiper mySwiper mb-4">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/data_sample.png" class="img-fluid" alt="Slide 1"></div>
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/framework.png" class="img-fluid" alt="Slide 2"></div>
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/matrix.png" class="img-fluid" alt="Slide 3"></div>
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/performance.png" class="img-fluid" alt="Slide 4"></div>
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/table.png" class="img-fluid" alt="Slide 5"></div>
-                <div class="swiper-slide"><img src="assets/img/papers/paper1/results_sample.png" class="img-fluid" alt="Slide 6"></div>
+                <!-- Wrap images in <a> for GLightbox zoom -->
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/data_sample.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/data_sample.png" class="img-fluid" alt="Slide 1">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/framework.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/framework.png" class="img-fluid" alt="Slide 2">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/matrix.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/matrix.png" class="img-fluid" alt="Slide 3">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/performance.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/performance.png" class="img-fluid" alt="Slide 4">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/table.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/table.png" class="img-fluid" alt="Slide 5">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/papers/paper1/results_sample.png" class="glightbox" data-gallery="paper-gallery">
+                    <img src="assets/img/papers/paper1/results_sample.png" class="img-fluid" alt="Slide 6">
+                  </a>
+                </div>
               </div>
               <!-- Navigation -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-pagination"></div>
             </div>
-    
-              
-          <!-- Right Content -->
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
+            <!-- Right Content -->
             <!-- Abstract -->
             <section id="abstract" class="paper-section">
               <h3>Abstract & Overview</h3>
@@ -238,7 +253,6 @@
 
   </main>
 
-
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -265,25 +279,36 @@
   <script src="assets/js/main.js"></script>
 
   <!-- Swiper JS -->
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- GLightbox JS -->
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    // Initialize GLightbox for clickable zoom images
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      zoomable: true
+    });
+  </script>
 
 </body>
 
