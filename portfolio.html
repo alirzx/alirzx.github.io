@@ -65,20 +65,24 @@
     height: 300px;
   }
 }
-
 /* Small devices (phones) */
-@media (max-width: 991.150px) {
+@media (max-width: 767.15px) {
   .portfolio-content img {
-    height: 250px;
+    width: 90%;        /* make image narrower than column */
+    height: auto;      /* adjust height proportionally */
+    margin: 0 auto;    /* center the image */
   }
 }
 
 /* Very small devices */
 @media (max-width: 479.98px) {
   .portfolio-content img {
-    height: 140px;
+    width: 95%;        /* slightly wider for tiny screens */
+    height: auto;
+    margin: 0 auto;
   }
 }
+
 
 
     /* Info area styling preserved but tightened */
