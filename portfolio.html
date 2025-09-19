@@ -68,20 +68,21 @@
 /* Small devices (phones) */
 @media (max-width: 767.15px) {
   .portfolio-content img {
-    width: 90%;        /* make image narrower than column */
-    height: auto;      /* adjust height proportionally */
-    margin: 0 auto;    /* center the image */
+    width: 100%;       /* full column width */
+    height: 220px;     /* slightly taller for mobile */
+    object-fit: cover; /* crop to maintain box shape */
   }
 }
 
 /* Very small devices */
 @media (max-width: 479.98px) {
   .portfolio-content img {
-    width: 95%;        /* slightly wider for tiny screens */
-    height: auto;
-    margin: 0 auto;
+    width: 100%;       /* full width */
+    height: 180px;     /* adjust proportionally */
+    object-fit: cover;
   }
 }
+
 
 
 
