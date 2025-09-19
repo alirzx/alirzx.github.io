@@ -66,14 +66,15 @@
   }
 }
 /* Small devices (phones) */
-@media (max-width: 767.15px) {
+@media (max-width: 767.98px) {
   .portfolio-content img {
-    width: 100%;       /* full column width */
-    height: 320px;     /* slightly taller for mobile */
-    object-fit: cover; /* crop to maintain box shape */
+    width: 100%;       /* fills column */
+    max-width: 100%;   /* ensures no extra constraint */
+    height: 320px;     /* fixed height for uniform layout */
+    object-fit: cover;
+    display: block;
   }
 }
-
 /* Very small devices */
 @media (max-width: 479.98px) {
   .portfolio-content img {
@@ -117,14 +118,17 @@
       text-decoration: none;
     }
 
+        /* Center filters horizontally */
     .portfolio-filters {
-      display: flex;
-      gap: 12px;
-      list-style: none;
-      padding-left: 0;
+      display: flex;          /* already set, but ensure flexbox */
+      justify-content: center; /* center items horizontally */
+      flex-wrap: wrap;        /* allow wrapping on small screens */
+      padding-left: 0;        /* remove default ul padding */
+      list-style: none;       /* remove bullets */
+      gap: 12px;              /* spacing between filters */
       margin-bottom: 24px;
-      flex-wrap: wrap;
     }
+
 
     .portfolio-filters li {
       cursor: pointer;
