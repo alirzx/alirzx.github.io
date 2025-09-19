@@ -69,7 +69,7 @@
 @media (max-width: 767.15px) {
   .portfolio-content img {
     width: 100%;       /* full column width */
-    height: 220px;     /* slightly taller for mobile */
+    height: 320px;     /* slightly taller for mobile */
     object-fit: cover; /* crop to maintain box shape */
   }
 }
@@ -168,6 +168,14 @@
   transition: background 0.3s;
 }
 
+/* Portfolio Search Bar */
+.portfolio-search {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
 /* .project-tags .tag:hover {
   background-color: #19c45d;
   color: #fff;
@@ -198,6 +206,8 @@
     </div>
   </nav>
 </div><!-- End Page Title -->
+
+
 
 
 <body class="services-page">
@@ -240,7 +250,7 @@
             <li data-filter=".filter-product" role="tab">Computer Vision</li>
             <li data-filter=".filter-branding" role="tab">Medical Imaging</li>
             <li data-filter=".filter-books" role="tab">Bio Medical Signal</li>
-            <li data-filter=".filter-books" role="tab">Natural Language Processing</li>
+            <li data-filter=".filter-nlp" role="tab">Natural Language Processing</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200" id="portfolio-container">
@@ -322,6 +332,12 @@
                   alt="Multi-Class Classification on CIFAR-100 Using Transfer Learning" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Computer Vision Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">Resnet</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Multi-Class Classification on CIFAR-100 Using Transfer Learning</p>
                   <a href="assets/img/portfolio/cifar100.png"
                     title="Multi-Class Classification on CIFAR-100 Using Transfer Learning"
@@ -734,6 +750,12 @@
                   alt="Sperm Colorized Images 3Class Dataset Classification" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Medical Imaging Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Sperm Colorized Images 3Class Dataset Classification</p>
                   <a href="assets/img/portfolio/sperm_colorized.png" title="Medical Imaging Project"
                     data-gallery="portfolio-gallery-branding" class="glightbox preview-link" aria-label="Open image"><i
@@ -751,6 +773,12 @@
                   alt="Analysis of biomedical signals for health monitoring" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Bio Medical Signal Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Analysis of biomedical signals for health monitoring</p>
                   <a href="assets/img/portfolio/eegproject.png" title="Bio Medical Signal Project"
                     data-gallery="portfolio-gallery-book" class="glightbox preview-link" aria-label="Open image"><i
@@ -768,6 +796,12 @@
                   alt="Hand Movement Recognition Using EEG Brainwave" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>Bio Medical Signal Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Hand Movement Recognition Using EEG Brainwave</p>
                   <a href="assets/img/portfolio/HandMovement.png" title="Bio Medical Signal Project"
                     data-gallery="portfolio-gallery-book" class="glightbox preview-link" aria-label="Open image"><i
@@ -785,6 +819,12 @@
                   alt="Bitcoin Volatility Forecasting Using RNNs and Statistical Methods" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>ML Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Bitcoin Volatility Forecasting Using RNNs and Statistical Methods</p>
                   <a href="assets/img/portfolio/bitcoin.png" title="ML Project" data-gallery="portfolio-gallery-app"
                     class="glightbox preview-link" aria-label="Open image"><i class="bi bi-zoom-in"></i></a>
@@ -801,6 +841,12 @@
                   alt="Heart Failure Predection Using ML & DL algorithms" loading="lazy" />
                 <div class="portfolio-info">
                   <h4>ML Project</h4>
+                  <div class="project-tags">
+                    <span class="tag">Transfer Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">CNN</span>
+                    <span class="tag">OpenCV</span>
+                  </div>
                   <p>Heart Failure Predection Using ML & DL algorithms</p>
                   <a href="assets/img/portfolio/heart.jpg"
                     title="Heart Failure Predection Using ML & DL algorithms" data-gallery="portfolio-gallery-app"
@@ -896,6 +942,16 @@
         }
       });
     });
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 
