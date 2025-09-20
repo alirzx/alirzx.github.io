@@ -185,6 +185,47 @@
   color: #fff;
   cursor: default;
 } */
+ /* Hide projects after the 6th by default */
+.portfolio-item.hidden {
+  display: none;
+}
+
+#load-more {
+  display: block;             /* Make button a block element */
+  margin: 10px auto 0 auto;   /* Center horizontally, add top margin */
+  background-color: #29cc61;  /* primary  */
+  border: none;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+#load-more:hover {
+  background-color: #129b50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 230, 10, 0.15);
+}
+
+
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh; /* adjust to take most of viewport */
+}
+
+.isotope-container {
+  flex: 1; /* takes all space needed for projects */
+}
+
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: auto; /* pushes it down */
+  padding-bottom: 50px; /* spacing from page bottom */
+}
+
 
   </style>
 </head>
@@ -860,11 +901,20 @@
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
+            
 
           </div><!-- End Portfolio Container -->
         </div>
       </div>
+
     </section><!-- /Portfolio Section -->
+    <div class="load-more-wrapper">
+      <button id="load-more" class="btn btn-primary">Load More</button>
+    </div>
+  </div>
+    </div>
+    
+    
 
   </main>
 
@@ -887,76 +937,106 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
+
+
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 
-  <script>
-    // Initialize AOS (if not already initialized in main.js)
-    if (typeof AOS !== 'undefined') {
-      AOS.init({ duration: 700, once: true });
-    }
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ duration: 700, once: true });
+  }
 
-    // Initialize GLightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox',
-      touchNavigation: true,
-      loop: true,
-      autoplayVideos: false
-    });
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: false
+  });
 
-    // Initialize Isotope for filtering
-    document.addEventListener('DOMContentLoaded', function () {
-      const gridElem = document.querySelector('.isotope-container');
-      if (gridElem && typeof Isotope !== 'undefined') {
-        // ensure images loaded before layout
-        imagesLoaded(gridElem, function () {
-          const iso = new Isotope(gridElem, {
-            itemSelector: '.isotope-item',
-            layoutMode: 'masonry',
-            percentPosition: true,
-            masonry: {
-              columnWidth: '.isotope-item'
-            }
-          });
+  // Portfolio & Load More
+  const gridElem = document.querySelector('.isotope-container');
+  const loadMoreBtn = document.getElementById('load-more');
+  const initialCount = 6;
+  let visibleCount = initialCount;
+  let isoItems = [];
+  let iso;
 
-          // filter controls
-          const filters = document.querySelectorAll('.portfolio-filters li');
-          filters.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-              filters.forEach(f => f.classList.remove('filter-active'));
-              btn.classList.add('filter-active');
-              const filterValue = btn.getAttribute('data-filter');
-              iso.arrange({ filter: filterValue });
-            });
-          });
+  if (gridElem && typeof Isotope !== 'undefined') {
+    imagesLoaded(gridElem, function () {
+      // Initialize Isotope
+      iso = new Isotope(gridElem, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry',
+        percentPosition: true,
+        masonry: { columnWidth: '.portfolio-item' }
+      });
+
+      isoItems = Array.from(gridElem.querySelectorAll('.portfolio-item'));
+
+      // Show/hide items for Load More
+      function showItems(count) {
+        isoItems.forEach((item, index) => {
+          item.classList.toggle('hidden', index >= count);
         });
+        iso.arrange({ filter: '*' }); // layout only visible items
+        loadMoreBtn.style.display = (count >= isoItems.length) ? 'none' : 'block';
       }
 
-      // Make clicking the image open the corresponding preview (if user clicks image area)
-      const portfolioContents = document.querySelectorAll('.portfolio-content');
-      portfolioContents.forEach(function (content) {
-        const img = content.querySelector('img');
-        const preview = content.querySelector('.preview-link');
-        if (img && preview) {
-          img.style.cursor = 'pointer';
-          img.addEventListener('click', function (e) {
-            e.preventDefault();
-            preview.click();
-          });
-        }
+      showItems(visibleCount);
+
+      // Load More click
+      loadMoreBtn.addEventListener('click', () => {
+        visibleCount += 6;
+        showItems(visibleCount);
+      });
+
+      // Filter buttons
+      const filters = document.querySelectorAll('.portfolio-filters li');
+      filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filters.forEach(f => f.classList.remove('filter-active'));
+          btn.classList.add('filter-active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          if (filterValue === '*') {
+            // Reset for All filter
+            visibleCount = initialCount;
+            showItems(visibleCount);
+          } else {
+            // Show all items in the selected category
+            isoItems.forEach(item => item.classList.remove('hidden'));
+            iso.arrange({ filter: filterValue });
+            loadMoreBtn.style.display = 'none'; // hide button for filtered views
+          }
+        });
       });
     });
+  }
 
+  // Make portfolio images clickable for preview
+  const portfolioContents = document.querySelectorAll('.portfolio-content');
+  portfolioContents.forEach(content => {
+    const img = content.querySelector('img');
+    const preview = content.querySelector('.preview-link');
+    if (img && preview) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', e => {
+        e.preventDefault();
+        preview.click();
+      });
+    }
+  });
+});
+</script>
 
-
-
-
-
-
-
-
-
-  </script>
-</body>
-
-</html>
+<style>
+/* Hide items with hidden class */
+.portfolio-item.hidden {
+  display: none !important;
+}
+</style>
