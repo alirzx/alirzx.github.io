@@ -1492,3 +1492,111 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/*adding new snippet
+
+/*--------------------------------------------------------------
+# Mobile & Tablet Font Scaling (up to 1199px)
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+
+  /* Body text and general elements */
+  body, p, li, span, .about .content ul li, .resume .resume-item p, 
+  .service-details p, .portfolio-details .portfolio-info p, 
+  .contact .info-item p {
+    font-size: 14px;  /* adjust as needed */
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  /* Hero section */
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* Section titles */
+  .section-title div {
+    font-size: 24px;
+  }
+
+  /* Portfolio */
+  .portfolio .portfolio-filters li {
+    font-size: 14px;
+  }
+
+  .portfolio .portfolio-content .portfolio-info h4 {
+    font-size: 12px;
+  }
+
+  .portfolio .portfolio-content .portfolio-info p {
+    font-size: 14px;
+  }
+
+  /* Services */
+  .services .service-item h3 {
+    font-size: 18px;
+  }
+
+  .services .service-item p {
+    font-size: 13px;
+  }
+
+  /* Resume */
+  .resume .resume-title {
+    font-size: 22px;
+  }
+
+  .resume .resume-item h4 {
+    font-size: 16px;
+  }
+
+  .resume .resume-item h5 {
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer h3 {
+    font-size: 28px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+
+  /* Contact Section */
+  .contact .info-item h3 {
+    font-size: 16px;
+  }
+
+  .contact .info-item p {
+    font-size: 13px;
+  }
+
+}
