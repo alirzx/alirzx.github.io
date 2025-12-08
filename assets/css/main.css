@@ -1509,46 +1509,46 @@ section,
 
   /* Headings */
   h1 {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  h4 {
-    font-size: 20px;
-  }
-
-  h5 {
     font-size: 18px;
   }
 
+  h3 {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+  h5 {
+    font-size: 8px;
+  }
+
   h6 {
-    font-size: 16px;
+    font-size: 6px;
   }
 
   /* Hero section */
   .hero h2 {
-    font-size: 32px;
+    font-size: 22px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 8px;
   }
 
   /* Section titles */
   .section-title div {
-    font-size: 24px;
+    font-size: 14px;
   }
 
   /* Portfolio */
   .portfolio .portfolio-filters li {
-    font-size: 14px;
+    font-size: 4px;
   }
 
   .portfolio .portfolio-content .portfolio-info h4 {
