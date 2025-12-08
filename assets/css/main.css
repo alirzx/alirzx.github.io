@@ -1493,7 +1493,7 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-/*adding new snippet
+/*adding new snippet , this is should be double check , and ensure will work!
 
 /*--------------------------------------------------------------
 # Mobile & Tablet Font Scaling (up to 1199px)
