@@ -1501,102 +1501,103 @@ section,
 @media (max-width: 1199px) {
 
   /* Body text and general elements */
-  body, p, li, span, .about .content ul li, .resume .resume-item p, 
-  .service-details p, .portfolio-details .portfolio-info p, 
+  body, p, li, span, .about .content ul li, .resume .resume-item p,
+  .service-details p, .portfolio-details .portfolio-info p,
   .contact .info-item p {
-    font-size: 14px;  /* adjust as needed */
+    font-size: 15px;  /* standard readable body text */
+    line-height: 1.55;
   }
 
-  /* Headings */
+  /* Headings – Balanced & Professional */
   h1 {
-    font-size: 22px;
+    font-size: 30px;   /* hero/section headers */
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 26px;   /* section titles */
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   h4 {
-    font-size: 10px;
+    font-size: 18px;
   }
 
   h5 {
-    font-size: 8px;
+    font-size: 16px;
   }
 
   h6 {
-    font-size: 6px;
+    font-size: 15px;
   }
 
   /* Hero section */
   .hero h2 {
-    font-size: 22px;
+    font-size: 30px;  /* readable but not oversized */
   }
 
   .hero p {
-    font-size: 8px;
+    font-size: 18px;
   }
 
   /* Section titles */
   .section-title div {
-    font-size: 14px;
+    font-size: 24px;
   }
 
   /* Portfolio */
   .portfolio .portfolio-filters li {
-    font-size: 4px;
+    font-size: 14px;
   }
 
   .portfolio .portfolio-content .portfolio-info h4 {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .portfolio .portfolio-content .portfolio-info p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   /* Services */
   .services .service-item h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .services .service-item p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   /* Resume */
   .resume .resume-title {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .resume .resume-item h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .resume .resume-item h5 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   /* Footer */
   .footer h3 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .footer p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   /* Contact Section */
   .contact .info-item h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .contact .info-item p {
-    font-size: 13px;
+    font-size: 14px;
   }
-
 }
+
