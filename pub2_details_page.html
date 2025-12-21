@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Paper Details - SpiTranNet-LIF</title>
+  <meta name="description" content="SpiTranNet-LIF: A hybrid spiking–transformer framework for efficient EEG-based motor imagery decoding in brain–computer interfaces.">
+  <meta name="keywords" content="Motor Imagery, EEG, Brain-Computer Interface, Spiking Neural Networks, Transformers, LIF Neurons, Neuromorphic Computing">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .services-list a {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .services-list a.active,
+    .services-list a:hover {
+      background-color: #11d76e;
+      color: #fff;
+    }
+
+    .paper-section {
+      padding: 40px 0;
+    }
+
+    .mySwiper .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .mySwiper {
+      margin-bottom: 5px;
+    }
+
+    .paper-section p {
+      text-align: justify;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 992px) {
+      .mySwiper .swiper-slide img {
+        max-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body class="service-details-page">
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <h1 class="sitename"></h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="services.html" class="active">Publications</a></li>
+        <li><a href="portfolio.html">Projects</a></li>
+        <li><a href="Awards.html">Honors & Awards</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+  <div class="heading">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1>SpiTranNet-LIF: A Hybrid Spiking–Transformer Framework for Efficient Motor Imagery Decoding</h1>
+          <p class="mb-0">
+            Authors: A. Hashemi, K. Azizi, M. K. Titkanlou, R. Mouček
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Publications</a></li>
+        <li class="current">Paper Details</li>
+      </ol>
+    </div>
+  </nav>
+</div>
+
+<section id="service-details" class="service-details section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Sidebar -->
+      <div class="col-lg-4" data-aos="fade-up">
+        <div class="services-list">
+          <a href="#abstract" class="active">Abstract & Overview</a>
+          <a href="#keywords">Keywords & Core Concepts</a>
+          <a href="#data">Dataset & Signal Processing</a>
+          <a href="#method">Proposed Architecture</a>
+          <a href="#results">Evaluation & Results</a>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-8" data-aos="fade-up">
+        <!-- Image Slider -->
+<div class="swiper mySwiper mb-4">
+  <div class="swiper-wrapper">
+
+    <!-- Workflow / Architecture -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/workflow_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/workflow_spi.png"
+             class="img-fluid"
+             alt="SpiTranNet-LIF overall workflow and architecture">
+      </a>
+    </div>
+
+    <!-- Training Dynamics -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/train_dyn_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/train_dyn_spi.png"
+             class="img-fluid"
+             alt="Training dynamics and convergence behavior of SpiTranNet-LIF">
+      </a>
+    </div>
+
+    <!-- Confusion Matrix -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/confusion_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/confusion_spi.png"
+             class="img-fluid"
+             alt="Confusion matrix for motor imagery classification">
+      </a>
+    </div>
+
+    <!-- ROC / AUC -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/auc_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/auc_spi.png"
+             class="img-fluid"
+             alt="ROC and AUC analysis for SpiTranNet-LIF">
+      </a>
+    </div>
+
+    <!-- Quantitative Metrics -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/metrics_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/metrics_spi.png"
+             class="img-fluid"
+             alt="Evaluation metrics across subjects">
+      </a>
+    </div>
+
+    <!-- Model Comparison -->
+    <div class="swiper-slide">
+      <a href="assets/img/papers/paper2/comparison_spi.png" class="glightbox" data-gallery="paper2-gallery">
+        <img src="assets/img/papers/paper2/comparison_spi.png"
+             class="img-fluid"
+             alt="Comparison of SpiTranNet-LIF with baseline models">
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+        <!-- Abstract -->
+        <section id="abstract" class="paper-section">
+          <h3>Abstract & Overview</h3>
+          <p>
+            Motor imagery decoding from electroencephalography (EEG) signals is a fundamental challenge in brain–computer interface (BCI) research, constrained by high temporal complexity, energy inefficiency, and limited generalization of conventional deep learning models. This work introduces <strong>SpiTranNet-LIF</strong>, a hybrid neural framework that integrates spiking neural dynamics with transformer-based attention mechanisms for efficient and biologically inspired motor imagery classification.
+          </p>
+          <p>
+            By embedding adaptive Leaky Integrate-and-Fire (LIF) neurons into a spiking multi-head self-attention module, the proposed architecture captures both local temporal patterns and long-range contextual dependencies while enabling temporally sparse computation. The framework is designed for real-time inference and suitability in resource-constrained and neuromorphic BCI systems.
+          </p>
+        </section>
+
+        <!-- Keywords -->
+        <section id="keywords" class="paper-section">
+          <h3>Keywords & Core Concepts</h3>
+          <p>
+            Motor Imagery, EEG, Brain–Computer Interfaces, Spiking Neural Networks, Transformers, LIF Neurons, Neuromorphic Computing, Temporal Attention
+          </p>
+        </section>
+
+        <!-- Dataset -->
+        <section id="data" class="paper-section">
+          <h3>Dataset & Signal Processing</h3>
+          <p>
+            <strong>Dataset:</strong> The model is evaluated on the BCI Competition IV-2a dataset, focusing on binary motor imagery classification (left-hand vs. right-hand). EEG recordings consist of multi-channel signals acquired under standardized experimental conditions.
+          </p>
+          <p>
+            <strong>Preprocessing:</strong> Signals undergo band-pass filtering in the 8–30 Hz range, exponential moving standardization, and common average referencing. Trials are segmented into fixed-length temporal windows and encoded into spike trains suitable for spiking neural computation.
+          </p>
+        </section>
+
+        <!-- Method -->
+        <section id="method" class="paper-section">
+          <h3>Proposed Architecture</h3>
+          <p>
+            SpiTranNet-LIF integrates convolutional feature extraction with a spiking transformer backbone. Temporal features are processed through spiking multi-head self-attention layers, where adaptive LIF neurons regulate membrane dynamics and firing thresholds.
+          </p>
+          <p>
+            The network is trained end-to-end using surrogate gradient learning to address the non-differentiability of spike events. This hybrid design enables efficient temporal modeling while significantly reducing computational redundancy compared to conventional transformer architectures.
+          </p>
+        </section>
+
+        <!-- Results -->
+        <section id="results" class="paper-section">
+          <h3>Evaluation & Results</h3>
+          <p>
+            Experimental results demonstrate an average classification accuracy of <strong>86.3%</strong>, with a Cohen’s κ score of <strong>0.73</strong> and a mean ROC-AUC of <strong>0.91</strong>. Subject-wise evaluations show stable performance despite inter-subject variability.
+          </p>
+          <p>
+            The model maintains a compact footprint (~600K parameters), low GPU memory consumption, and sub-second inference latency, confirming its suitability for real-time BCI deployment. These findings highlight the effectiveness of hybrid spiking–transformer architectures for efficient EEG decoding.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 3000 },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    pagination: { el: ".swiper-pagination", clickable: true }
+  });
+</script>
+
+</body>
+</html>
