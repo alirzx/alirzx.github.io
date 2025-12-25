@@ -179,70 +179,12 @@
 
 
 <style>
-/* Only for mobile devices */
-@media screen and (max-width: 767px) {
-  .hero-text {
-    margin-top: -590px !important; /* increase negative value to move it further up */
-  }
-}
-</style>
 
+/* ==========================
+   HERO TEXT & VIDEO POSITIONING
+========================== */
 
-<style>
-  /* Scoped ONLY to index hero text */
-  .index-page .hero-text h2 {
-    font-size: 3.2rem;   /* desktop */
-  }
-
-  .index-page .hero-text p {
-    font-size: 1.0rem;
-  }
-
-  /* Tablet */
-  @media (max-width: 992px) {
-    .index-page .hero-text h2 {
-      font-size: 1.5rem;
-    }
-
-    .index-page .hero-text p {
-      font-size: 0.9rem;
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 576px) {
-    .index-page .hero-text h2 {
-      font-size: 1.4rem;
-    }
-
-    .index-page .hero-text p {
-      font-size: 0.85rem;
-    }
-  }
-</style>
-
-<style>
-  /* Move hero text slightly to the left */
-  .index-page .hero-text {
-    transform: translateX(-40px);
-  }
-
-  /* Tablet */
-  @media (max-width: 992px) {
-    .index-page .hero-text {
-      transform: translateX(-25px);
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 576px) {
-    .index-page .hero-text {
-      transform: translateX(-15px);
-    }
-  }
-  
-
-  /* Hero wrapper — NO layout influence */
+/* Base hero wrapper */
 #hero {
   position: relative;
   width: 100%;
@@ -250,7 +192,7 @@
   overflow: hidden;
 }
 
-/* Common video base */
+/* Common video base (desktop/tablet/mobile) */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -258,20 +200,20 @@
   height: 100%;
 }
 
-/* Blurred background (subtle now) */
+/* Blurred background (subtle) */
 .hero-video-bg {
   object-fit: cover;
-  filter: blur(1px);          /* ⬅ less blur */
-  transform: scale(1.0);      /* ⬅ less spread */
-  opacity: 0.45;               /* ⬅ softer presence */
+  filter: blur(1px);          /* 🔧 Less blur for background sides */
+  transform: scale(1.0);      /* 🔧 Controls spread of blurred video */
+  opacity: 0.45;              /* 🔧 Visibility of background layer */
   z-index: 0;
 }
 
-/* Main sharp video (bigger center) */
+/* Main sharp video (center focus) */
 .hero-video-main {
   object-fit: contain;
   object-position: center;
-  transform: scale(1.25);      /* ⬅ makes center visually larger */
+  transform: scale(1.25);     /* 🔧 Adjust center prominence: increase = bigger center */
   z-index: 1;
 }
 
@@ -283,27 +225,76 @@
   z-index: 2;
 }
 
-/* Text layer — DO NOT TOUCH POSITION */
-.hero-text {
-  /* position: relative; */
-  z-index: 3;
+/* ==========================
+   HERO TEXT POSITIONING
+========================== */
+
+/* Desktop base positioning */
+.index-page .hero-text {
+  position: absolute;         /* 🔧 Anchor text to hero section */
+  top: 10%;                   /* 🔧 Vertical position (desktop) */
+  left: 0.001%;                   /* 🔧 Horizontal position (desktop) */
+  transform: none;            /* 🔧 Reset old translate hacks */
+  z-index: 3;                 /* Layer above video and overlay */
 }
 
-/* Disable video only on phones */
+/* Desktop text size */
+.index-page .hero-text h2 {
+  font-size: 2.5rem;          /* 🔧 Name font size */
+}
+.index-page .hero-text p {
+  font-size: 0.9rem;          /* 🔧 Subtitle font size */
+}
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+  .index-page .hero-text {
+    top: 34%;                 /* 🔧 Move slightly down on tablet */
+    left: 5%;                 /* 🔧 Shift slightly left on tablet */
+  }
+
+  .index-page .hero-text h2 {
+    font-size: 3.0rem;        /* 🔧 Slightly bigger on tablet */
+  }
+
+  .index-page .hero-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile adjustments */
 @media (max-width: 576px) {
-  .hero-video {
-    display: none;
+  .index-page .hero-text {
+    top: 38%;                 /* 🔧 Move down on mobile */
+    left: 5%;                 /* 🔧 Slightly left-aligned on mobile */
   }
 
-  #hero {
-    background: url("assets/img/neuron.jpg") center / cover no-repeat;
+  .index-page .hero-text h2 {
+    font-size: 2.2rem;        /* 🔧 Smaller name for small screens */
+  }
+
+  .index-page .hero-text p {
+    font-size: 1.0rem;
   }
 }
 
-/* FIX: stop template from vertically centering hero text */
+/* ==========================
+   FLEXBOX TEMPLATE OVERRIDE
+========================== */
+
+/* Stop template from vertically centering hero text */
 .index-page #hero {
   display: block !important;
 }
+
+/* ==========================
+   NOTES:
+- Adjust "top" to move text up/down.
+- Adjust "left" to move text left/right.
+- Adjust "transform: scale()" in .hero-video-main to tune center dominance of video.
+- Blurred background: filter and opacity tune background visibility.
+- Video is now enabled on all devices; remove previous mobile display:none hack.
+========================== */
 
 
 </style>
