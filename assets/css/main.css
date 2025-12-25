@@ -53,7 +53,7 @@ strong {
   --nav-mobile-background-color: #ffffff; /* Mobile menu background */
   --nav-dropdown-background-color: #ffffff; /* Dropdown background */
   --nav-dropdown-color: #000000;        /* Dropdown text (black) */
-  --nav-dropdown-hover-color: #11d76e;  /* Hovered dropdown link */
+  --nav-dropdown-hover-color: #11d76e;  /* Hovered dropdown ,this is fake comment for just new commit ! */
 }
 
 /* Color Presets - overrides for sections */
