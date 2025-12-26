@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>contact</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Contact | Alireza Hashemi</title>
+  <meta name="description" content="Contact Alireza Hashemi for collaborations, research, or inquiries in CV, BCI, NeuroAI, and AI projects">
+  <meta name="keywords" content="Alireza Hashemi, contact, collaboration, research, BCI, EEG, AI, NeuroAI">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,67 +15,74 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Mar 05 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    /* Fix header overlap */
+    .page-title {
+      padding-top: 120px; /* adjust according to header height */
+    }
+
+    /* Optional: ORCID icon sizing */
+    .orcid-icon {
+      width: 1em;
+      margin-inline-start: 0.5em;
+      vertical-align: middle;
+    }
+
+    /* Responsive map */
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 
 <body class="contact-page">
 
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
+    <div class="container-fluid container-xl d-flex justify-content-between align-items-center">
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename"></h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Me</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Publicatations</a></li>
+          <li><a href="services.html">Publications</a></li>
           <li><a href="portfolio.html">Projects</a></li>
           <li><a href="Awards.html">Honors & Awards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
 
+  <!-- Main -->
   <main class="main">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Contact</h1>
-              <p class="mb-0">If you'd like to get in touch, discuss collaboration opportunities, or just say hello, feel free to reach out! I'm always open to new ideas and conversations. You can contact me via email or connect with me on social media.</p>
-            </div>
-          </div>
-        </div>
+      <div class="container text-center">
+        <h1>Contact</h1>
+        <p class="mb-0">Reach out for collaborations, research inquiries, or any professional discussions. Always open to new ideas and conversations.</p>
       </div>
       <nav class="breadcrumbs">
         <div class="container">
@@ -85,130 +92,133 @@
           </ol>
         </div>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+          <!-- Contact Info -->
+          <div class="col-lg-5">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
               <i class="icon bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Address</h3>
-                <p>IRAN-Mazandaran</p>
+                <p>Iran – Tehran, Azadi Square</p>
               </div>
             </div>
-          </div><!-- End Info Item -->
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
               <i class="icon bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Me</h3>
-                <p>09394068098</p>
+                <h3>Phone</h3>
+                <p><a href="tel:+989394068098">+98 939 406 8098</a></p>
               </div>
             </div>
-          </div><!-- End Info Item -->
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Me</h3>
-                <p>alirahshmi@gmail.com</p>
+                <h3>Email</h3>
+                <p><a href="mailto:alirahshmi@gmail.com">alirahshmi@gmail.com</a></p>
               </div>
             </div>
-          </div><!-- End Info Item -->
 
-          <div class="col-md-6">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
-              <i class="icon bi bi-share flex-shrink-0"></i>
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="500">
+              <i class="icon bi bi-people flex-shrink-0"></i>
               <div>
-                <h3>Social Profiles</h3>
+                <h3>Social / Academic Profiles</h3>
                 <div class="social-links">
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-skype"></i></a>
-                  <a href="https://www.linkedin.com/in/alireza-hashemi6996"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/alireza-hashemi6996" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://orcid.org/0009-0003-9074-0992" target="_blank"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" class="orcid-icon" alt="ORCID iD"></a>
+                  <a href="https://scholar.google.com/citations?user=O7t8-3EAAAAJ&hl=en" target="_blank"><i class="bi bi-mortarboard-fill"></i></a>
+                  <a href="https://github.com/alirzx" target="_blank"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
-          </div><!-- End Info Item -->
+
+            <!-- Leaflet Map -->
+            <div class="info-item d-flex flex-column mt-3">
+              <h3>Location</h3>
+              <div id="map"></div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-7">
+            <form action="https://formspree.io/f/xkgrlejk" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+
+                <div style="display: none;">
+                  <input type="text" name="_gotcha">
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
 
         </div>
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <div class="container">
-
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/xkgrlejk" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-      <div class="row gy-4">
-
-        <div class="col-md-6">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-        </div>
-
-        <div class="col-md-6">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-        </div>
-
-        <div class="col-md-12">
-          <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-        </div>
-
-        <div class="col-md-12">
-          <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-        </div>
-
-        <!-- Honeypot Field for Spam Protection -->
-        <div style="display: none;">
-          <input type="text" name="_gotcha">
-        </div>
-
-        <div class="col-md-12 text-center">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-
-          <button type="submit">Send Message</button>
-        </div>
-
       </div>
-    </form><!-- End Contact Form -->
+    </section>
 
-  </div>
-
-</section><!-- /Contact Section -->
-</section><!-- /Contact Section -->
-
+  </main>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Tehran, Tarasht – Science and Innovation of Sharif Tower coordinates
+  const tehranCoords = [35.7008, 51.3377]; // you can adjust latitude/longitude if you have exact spot
+  const map = L.map('map').setView(tehranCoords, 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  L.marker(tehranCoords).addTo(map)
+    .bindPopup('Alireza Hashemi – Tarasht, Science and Innovation of Sharif Tower, Tehran, Iran')
+    .openPopup();
+</script>
 
-  <!-- Main JS File -->
+  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
