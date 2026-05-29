@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Paper Details - SpiTranNet-LIF</title>
-  <meta name="description" content="SpiTranNet-LIF: A hybrid spiking–transformer framework for efficient EEG-based motor imagery decoding in brain–computer interfaces.">
+  <title>SpiTranNet-LIF Paper | Alireza Hashemi</title>
+  <meta name="description" content="Accepted ICCAR 2026 paper on SpiTranNet-LIF, a hybrid spiking-transformer framework for efficient EEG motor imagery decoding.">
   <meta name="keywords" content="Motor Imagery, EEG, Brain-Computer Interface, Spiking Neural Networks, Transformers, LIF Neurons, Neuromorphic Computing">
 
   <!-- Favicons -->
@@ -109,7 +109,8 @@
         <div class="col-lg-8">
           <h1>SpiTranNet-LIF: A Hybrid Spiking–Transformer Framework for Efficient Motor Imagery Decoding</h1>
           <p class="mb-0">
-            Authors: M.K. Titkanlou, A. Hashemi, R. Mouček
+            Authors: M.K. Titkanlou, A. Hashemi, R. Moucek<br>
+            Status: Accepted for ICCAR 2026.
           </p>
         </div>
       </div>
@@ -214,10 +215,10 @@
         <section id="abstract" class="paper-section">
           <h3>Abstract & Overview</h3>
           <p>
-            Motor imagery decoding from electroencephalography (EEG) signals is a fundamental challenge in brain–computer interface (BCI) research, constrained by high temporal complexity, energy inefficiency, and limited generalization of conventional deep learning models. This work introduces <strong>SpiTranNet-LIF</strong>, a hybrid neural framework that integrates spiking neural dynamics with transformer-based attention mechanisms for efficient and biologically inspired motor imagery classification.
+            Motor imagery decoding from electroencephalography (EEG) signals is a central challenge in brain-computer interface (BCI) research. This work introduces <strong>SpiTranNet-LIF</strong>, a hybrid neural framework that integrates spiking neural dynamics with transformer-based attention mechanisms for efficient motor imagery classification.
           </p>
           <p>
-            By embedding adaptive Leaky Integrate-and-Fire (LIF) neurons into a spiking multi-head self-attention module, the proposed architecture captures both local temporal patterns and long-range contextual dependencies while enabling temporally sparse computation. The framework is designed for real-time inference and suitability in resource-constrained and neuromorphic BCI systems.
+            By embedding adaptive Leaky Integrate-and-Fire (LIF) neurons into a spiking multi-head self-attention module, the architecture captures local temporal patterns and long-range dependencies while enabling temporally sparse computation. The framework is designed with compact inference and resource-constrained BCI deployment in mind.
           </p>
         </section>
 
@@ -225,7 +226,7 @@
         <section id="keywords" class="paper-section">
           <h3>Keywords & Core Concepts</h3>
           <p>
-            Motor Imagery, EEG, Brain–Computer Interfaces, Spiking Neural Networks, Transformers, LIF Neurons, Neuromorphic Computing, Temporal Attention
+            Motor Imagery, EEG, Brain-Computer Interfaces, Spiking Neural Networks, Transformers, LIF Neurons, Neuromorphic Computing, Temporal Attention
           </p>
         </section>
 
@@ -255,7 +256,7 @@
         <section id="results" class="paper-section">
           <h3>Evaluation & Results</h3>
           <p>
-            Experimental results demonstrate an average classification accuracy of <strong>86.3%</strong>, with a Cohen’s κ score of <strong>0.73</strong> and a mean ROC-AUC of <strong>0.91</strong>. Subject-wise evaluations show stable performance despite inter-subject variability.
+            Experimental results demonstrate an average classification accuracy of <strong>86.3%</strong>, with a Cohen's kappa score of <strong>0.73</strong> and a mean ROC-AUC of <strong>0.91</strong>. Subject-wise evaluations show stable performance despite inter-subject variability.
           </p>
           <p>
             The model maintains a compact footprint (~600K parameters), low GPU memory consumption, and sub-second inference latency, confirming its suitability for real-time BCI deployment. These findings highlight the effectiveness of hybrid spiking–transformer architectures for efficient EEG decoding.

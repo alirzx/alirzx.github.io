@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Paper Details - Breast Cancer Classification using ResNeXt50_32x4d</title>
-  <meta name="description" content="Breast cancer classification using ResNeXt50_32x4d with hybrid loss on histopathological images.">
+  <title>Breast Cancer Classification Paper | Alireza Hashemi</title>
+  <meta name="description" content="Submitted medical AI paper on breast cancer histopathology classification using ResNeXt50_32x4d, hybrid loss, augmentation, and patient-wise validation.">
   <meta name="keywords" content="Breast Cancer Classification, Histopathological Images, ResNeXt50_32x4d, Hybrid Loss Function, Data Augmentation, Multi-Resolution Analysis, Deep Learning, Transfer Learning">
 
   <!-- Favicons -->
@@ -111,7 +111,8 @@
             <div class="col-lg-8">
               <h1>Breast Cancer Classification using ResNeXt50_32x4d with Hybrid Loss</h1>
               <p class="mb-0">
-                Authors: A. Hashemi ,K. Azizi ,M.K. Titkanlou ,R. Mouček<br>
+                Authors: A. Hashemi, K. Azizi, M.K. Titkanlou, R. Moucek<br>
+                Status: Submitted to Biomedical Signal Processing and Control, under review.
               </p>
             </div>
           </div>
@@ -192,10 +193,10 @@
             <section id="abstract" class="paper-section">
               <h3>Abstract & Overview</h3>
               <p>
-                Breast cancer remains a leading cause of cancer-related deaths in women, requiring early and accurate diagnosis. Histopathological analysis is the gold standard but is time-consuming and subjective. This study proposes a deep learning framework based on ResNeXt50_32x4d for binary classification of benign and malignant breast tumors using histopathological images.
+                This work studies binary breast cancer classification from histopathological images using a deployment-aware medical AI workflow. The goal is to support reliable benign-versus-malignant screening while keeping the experimental protocol rigorous enough for clinical research settings.
               </p>
               <p>
-                Using the BreaKHis dataset (7,909 images at 40×, 100×, 200×, and 400× magnifications), the model is fine-tuned with a patient-wise split to prevent data leakage. A diverse augmentation pipeline and a hybrid loss function (weighted BCE + hard triplet loss) improve generalization and embedding separability. The model achieves 99.37% test accuracy and AUC-ROC of 0.9976, demonstrating reliable performance across all magnification levels.
+                Using the BreaKHis dataset (7,909 images at 40x, 100x, 200x, and 400x magnifications), the model is fine-tuned with a patient-wise split to reduce leakage risk. A diverse augmentation pipeline and a hybrid loss function (weighted BCE plus hard triplet loss) improve generalization and embedding separability. The model achieves 99.37% test accuracy and an AUC-ROC of 0.9976, demonstrating stable performance across magnification levels.
               </p>
             </section>
 
@@ -211,10 +212,10 @@
             <section id="data" class="paper-section">
               <h3>Dataset & Preprocessing</h3>
               <p>
-                <strong>Dataset:</strong> BreaKHis dataset contains 7,909 images from 82 patients. Classes: Benign (2,480 images) – adenosis, fibroadenoma, phyllodes tumor, tubular adenoma; Malignant (5,429 images) – ductal carcinoma, lobular carcinoma, mucinous carcinoma, papillary carcinoma. Images are 700 × 460 px, RGB, across 40×, 100×, 200×, 400× magnifications.
+                <strong>Dataset:</strong> BreaKHis contains 7,909 images from 82 patients. Classes include benign subtypes (adenosis, fibroadenoma, phyllodes tumor, tubular adenoma) and malignant subtypes (ductal carcinoma, lobular carcinoma, mucinous carcinoma, papillary carcinoma). Images are RGB histopathology samples across 40x, 100x, 200x, and 400x magnifications.
               </p>
               <p>
-                <strong>Preprocessing:</strong> Patient-wise split (70% training, 20% validation, 10% testing). Class balance ensured via oversampling/undersampling. Augmentation includes resize (256×256 → 224×224 crop), flips, affine transforms, color jitter, Gaussian blur, random erasing, MixUp, and CutMix.
+                <strong>Preprocessing:</strong> The study uses a patient-wise 70/20/10 train-validation-test split. Class balance is handled through sampling strategies, and augmentation includes resizing, cropping, flips, affine transforms, color jitter, Gaussian blur, random erasing, MixUp, and CutMix.
               </p>
             </section>
 
@@ -233,7 +234,7 @@
             <section id="results" class="paper-section">
               <h3>Evaluation & Results</h3>
               <p>
-                <strong>Overall Accuracy:</strong> 99.37% (ResNeXt baseline). Magnification-level accuracy: 40×: 100%, 100×: 99.54%, 200×: 99.49%, 400×: 98.33%.
+                <strong>Overall Accuracy:</strong> 99.37% with strong magnification-level performance: 40x: 100%, 100x: 99.54%, 200x: 99.49%, 400x: 98.33%.
               </p>
               <p>
                 <strong>Other Models:</strong> ResNeXt+CBAM: 99.24% overall, improved AUC-ROC at some levels. ViT-B/16: 98.86% accuracy, excels at high magnifications. DenseNet201: 98.23%, lower at higher resolutions.
