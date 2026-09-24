@@ -109,15 +109,21 @@
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    const typedItems = selectTyped.getAttribute('data-typed-items');
+    const separator = selectTyped.getAttribute('data-typed-separator') || ',';
+
+    if (typedItems) {
+      const typedStrings = typedItems.split(separator).map(item => item.trim()).filter(Boolean);
+
+      new Typed('.typed', {
+        strings: typedStrings,
+        loop: true,
+        typeSpeed: 55,
+        backSpeed: 32,
+        backDelay: 1200,
+        smartBackspace: false
+      });
+    }
   }
 
   /**
